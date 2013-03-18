@@ -4,7 +4,7 @@ Author: Robert Tayco
 Author URI: http://roberttayco.com/
 Description: Custom theme for Burger Blog
 Version: 2.0
-Text Domain: burgerblog
+Text Domain: vegasburgerblog
 */
 
 /* =Notes
@@ -36,141 +36,60 @@ to maintain vertical rhythm:
   margin: 1.714285714rem 0; ( 24 / $rembase )
 }
 
----------- Further reading
+*/
 
-http://snook.ca/archives/html_and_css/font-size-with-rem
-http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+// Colors
+// ====================
+$nav-bg: #062534;
+$nav-bg-lt: lighten($nav-bg, 20%);
+$nav-bg-dk: darken($nav-bg, 20%);
 
+$header-bg: #638a81;
 
-/* =Reset
--------------------------------------------------------------- */
+$body-bg: #ccdad7;
+$body-bg-dk: darken($body-bg, 10%);
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-caption,
-th,
-td {
-  font-weight: normal;
-  text-align: left;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  clear: both;
-}
-html {
-  overflow-y: scroll;
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-a:focus {
-  outline: thin dotted;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-  display: block;
-}
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-}
-del {
-  color: #333;
-}
-ins {
-  background: #fff9c0;
-  text-decoration: none;
-}
-hr {
-  background-color: #ccc;
-  border: 0;
-  height: 1px;
-  margin: 24px;
-  margin-bottom: 1.714285714rem;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-small {
-  font-size: smaller;
-}
-img {
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-}
-
-/* Clearing floats */
-.clear:after,
-.wrapper:after,
-.format-status .entry-header:after {
-  clear: both;
-}
-.clear:before,
-.clear:after,
-.wrapper:before,
-.wrapper:after,
-.format-status .entry-header:before,
-.format-status .entry-header:after {
-  display: table;
-  content: "";
-}
+// Variables
+// ====================
+// $wrap-width: 1100px;
+$font-size: 14px;
 
 
+@import "reset";
+@import "mixins";
+
+@include img-replacement;
+@include clearfix;
+@include grid(16,2%,100%);
+
+.wrap { }
+#glamour {
+  height: 480px;
+}
+
+header {
+  .masthead {
+    background: $header-bg;
+    height: 125px;
+  }
+}
+
+.hero, .sidekick {
+  float: left;
+  overflow: hidden;
+}
+.hero {
+  height: 480px;
+  width: 60%;
+}
+.sidekick {
+  height: 240px;
+  width: 40%;
+}
 /* =Repeatable patterns
 -------------------------------------------------------------- */
+
+/* Recent Posts */
 
 /* Small headers */
 .archive-title,
@@ -335,13 +254,10 @@ video {
   max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
 
+.left { float: left; }
+.right { float: right; }
+
 /* Images */
-.alignleft {
-  float: left;
-}
-.alignright {
-  float: right;
-}
 .aligncenter {
   display: block;
   margin-left: auto;
@@ -405,7 +321,27 @@ img.wp-smiley,
   padding: 3%;
 }
 
+// =======================
 /* Navigation */
+nav {
+  &.main-nav {
+    $nav-height: 60px;
+    background: $nav-bg;
+    height: $nav-height;
+    width: 100%;
+
+    ul {
+      line-height: $nav-height;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+  }
+  li {
+    float: left;
+  }
+}
+// =======================
+
 .site-content nav {
   clear: both;
   line-height: 2;
@@ -475,8 +411,8 @@ html {
   font-size: 87.5%;
 }
 body {
+  background: $body-bg-dk;
   font-size: 14px;
-  font-size: 1rem;
   font-family: Helvetica, Arial, sans-serif;
   text-rendering: optimizeLegibility;
   color: #444;
@@ -492,28 +428,28 @@ a:hover {
   color: #0f3647;
 }
 
-/* Assistive text */
-.assistive-text,
-.site .screen-reader-text {
-  position: absolute !important;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-.main-navigation .assistive-text:hover,
-.main-navigation .assistive-text:active,
-.main-navigation .assistive-text:focus {
-  background: #fff;
-  border: 2px solid #333;
-  border-radius: 3px;
-  clip: auto !important;
-  color: #000;
-  display: block;
-  font-size: 12px;
-  padding: 12px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 100000; /* Above WP toolbar */
-}
+// /* Assistive text */
+// .assistive-text,
+// .site .screen-reader-text {
+//   position: absolute !important;
+//   clip: rect(1px, 1px, 1px, 1px);
+// }
+// .main-navigation .assistive-text:hover,
+// .main-navigation .assistive-text:active,
+// .main-navigation .assistive-text:focus {
+//   background: #fff;
+//   border: 2px solid #333;
+//   border-radius: 3px;
+//   clip: auto !important;
+//   color: #000;
+//   display: block;
+//   font-size: 12px;
+//   padding: 12px;
+//   position: absolute;
+//   top: 5px;
+//   left: 5px;
+//   z-index: 100000; /* Above WP toolbar */
+// }
 
 /* Page structure */
 .site {
@@ -530,71 +466,71 @@ a:hover {
   margin: 1.714285714rem 0 0;
 }
 
-/* Header */
-.site-header {
-  padding: 24px 0;
-  padding: 1.714285714rem 0;
-}
-.site-header h1,
-.site-header h2 {
-  text-align: center;
-}
-.site-header h1 a,
-.site-header h2 a {
-  color: #515151;
-  display: inline-block;
-  text-decoration: none;
-}
-.site-header h1 a:hover,
-.site-header h2 a:hover {
-  color: #21759b;
-}
-.site-header h1 {
-  font-size: 24px;
-  font-size: 1.714285714rem;
-  line-height: 1.285714286;
-  margin-bottom: 14px;
-  margin-bottom: 1rem;
-}
-.site-header h2 {
-  font-weight: normal;
-  font-size: 13px;
-  font-size: 0.928571429rem;
-  line-height: 1.846153846;
-  color: #757575;
-}
-.header-image {
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
-}
+// /* Header */
+// .site-header {
+//   padding: 24px 0;
+//   padding: 1.714285714rem 0;
+// }
+// .site-header h1,
+// .site-header h2 {
+//   text-align: center;
+// }
+// .site-header h1 a,
+// .site-header h2 a {
+//   color: #515151;
+//   display: inline-block;
+//   text-decoration: none;
+// }
+// .site-header h1 a:hover,
+// .site-header h2 a:hover {
+//   color: #21759b;
+// }
+// .site-header h1 {
+//   font-size: 24px;
+//   font-size: 1.714285714rem;
+//   line-height: 1.285714286;
+//   margin-bottom: 14px;
+//   margin-bottom: 1rem;
+// }
+// .site-header h2 {
+//   font-weight: normal;
+//   font-size: 13px;
+//   font-size: 0.928571429rem;
+//   line-height: 1.846153846;
+//   color: #757575;
+// }
+// .header-image {
+//   margin-top: 24px;
+//   margin-top: 1.714285714rem;
+// }
 
-/* Navigation Menu */
-.main-navigation {
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
-  text-align: center;
-}
-.main-navigation li {
-  margin-top: 24px;
-  margin-top: 1.714285714rem;
-  font-size: 12px;
-  font-size: 0.857142857rem;
-  line-height: 1.42857143;
-}
-.main-navigation a {
-  color: #5e5e5e;
-}
-.main-navigation a:hover {
-  color: #21759b;
-}
-.main-navigation ul.nav-menu,
-.main-navigation div.nav-menu > ul {
-  display: none;
-}
-.main-navigation ul.nav-menu.toggled-on,
-.menu-toggle {
-  display: inline-block;
-}
+// /* Navigation Menu */
+// .main-navigation {
+//   margin-top: 24px;
+//   margin-top: 1.714285714rem;
+//   text-align: center;
+// }
+// .main-navigation li {
+//   margin-top: 24px;
+//   margin-top: 1.714285714rem;
+//   font-size: 12px;
+//   font-size: 0.857142857rem;
+//   line-height: 1.42857143;
+// }
+// .main-navigation a {
+//   color: #5e5e5e;
+// }
+// .main-navigation a:hover {
+//   color: #21759b;
+// }
+// .main-navigation ul.nav-menu,
+// .main-navigation div.nav-menu > ul {
+//   display: none;
+// }
+// .main-navigation ul.nav-menu.toggled-on,
+// .menu-toggle {
+//   display: inline-block;
+// }
 
 /* Banner */
 section[role="banner"] {

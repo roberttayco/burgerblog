@@ -1,0 +1,45 @@
+// Mixins
+// ======================
+@mixin img-replacement {
+  /* img replacement */
+  .ir {
+      font: 0/0 a;
+      text-shadow: none;
+      color: transparent;
+  }
+}
+
+@mixin clearfix {
+  /* clearfix */
+  .cf {
+    &:before, &:after {
+      content: "";
+      display: table;
+    }
+    &:after { clear: both; }
+  }
+  /* for IE6/7 */
+  .cf { *zoom: 1; } 
+}
+
+@mixin font-size($px-size) {
+  font-size: $px-size;
+}
+
+@mixin grid($cols, $gutter, $wrap-width) {
+// Grid
+// =================
+  %columns {
+    float: left;
+    margin: 0 $gutter;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+
+  @for $i from 1 through $cols {
+    .col-#{$i} {
+      width: ($wrap-width - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
+      @extend %columns;
+    }
+  }
+}
