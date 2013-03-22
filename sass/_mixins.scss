@@ -22,24 +22,14 @@
   .cf { *zoom: 1; } 
 }
 
-@mixin font-size($px-size) {
-  font-size: $px-size;
+@mixin box-sizing {
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-@mixin grid($cols, $gutter, $wrap-width) {
-// Grid
-// =================
-  %columns {
-    float: left;
-    margin: 0 $gutter;
-    &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0; }
-  }
-
-  @for $i from 1 through $cols {
-    .col-#{$i} {
-      width: ($wrap-width - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
-      @extend %columns;
-    }
-  }
+@mixin text-shadow($color) {
+  text-shadow: 1px 1px 0 $color,
+               2px 2px 0 $color,
+               3px 3px 0 $color;
 }

@@ -1,0 +1,33 @@
+/* Desktop
+================== */
+@media screen and (min-width: 960px) {
+
+  body { background-color: #559955; }
+
+// grid system
+// ======================
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    width: (100% - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
+    @extend %columns;    
+  }
+} 
+
+header {
+  .search {
+    width: 25%;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.row article.recent.col-4 {
+  width: (100% / 3) - 2 * $gutter;
+}
+
+
+
+}

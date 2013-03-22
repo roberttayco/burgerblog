@@ -1,0 +1,64 @@
+/* Tablet
+================== */
+@media screen and (min-width: 768px) {
+
+body { background: #336666; }
+
+// grid system
+// ======================
+ 
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    @if $i == $cols / 4 { width: (100% / 2) - 2 * $gutter; }
+    @else if $i == $cols / 3 { width: (100% / 3) - 2 * $gutter; }
+    @else if $i == 2 * ($cols / 3) { width: 2 * (100% / 3) - 2 * $gutter; }
+    @else if $i == $cols / 2 { width: (100% / 2) - 2 * $gutter; }
+    @else { width: 100% - 2 * $gutter; }
+    @extend %columns;    
+  }
+}
+
+
+/* Recent Posts */
+article {
+  figure {
+    height: 12 * $em;
+    overflow: hidden;
+    // position: relative;
+  }
+  img {
+    width: 100%;
+  }
+
+  &.recent {
+    width: (100% / 2) - 2 * $gutter;
+    &:last-child {
+      width: 100% - 2 * $gutter;
+      .meta {
+        float: right;
+        width: 65%;
+      }
+      figure {
+        float: left;
+        height: 100%;
+        width: 30%;
+      }
+    }
+
+    figure {
+      float: none;
+      width: 100%;
+    }
+
+    .meta {
+      // float: left;
+      width: 100%;
+
+      .copy {
+        display: block;
+        visibility: visible;
+      }
+    }
+  }
+}
+}
