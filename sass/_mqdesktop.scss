@@ -24,8 +24,17 @@ header {
   max-width: 1100px;
 }
 
-.row article.recent.col-4 {
+article.recent.col-4 {
   width: (100% / 3) - 2 * $gutter;
+  .meta {
+    width: 100%;
+  }
+  figure {
+    float: none;
+    height: 14 * $em;
+    overflow: hidden;
+    width: 100%;
+  }
 }
 
 

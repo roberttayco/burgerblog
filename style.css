@@ -739,8 +739,15 @@ a:hover {
     margin: 0 auto;
     max-width: 1100px; }
 
-  .row article.recent.col-4 {
-    width: 29.33333%; } }
+  article.recent.col-4 {
+    width: 29.33333%; }
+    article.recent.col-4 .meta {
+      width: 100%; }
+    article.recent.col-4 figure {
+      float: none;
+      height: 12.25em;
+      overflow: hidden;
+      width: 100%; } }
 /* img replacement */
 .ir {
   font: 0/0 a;
