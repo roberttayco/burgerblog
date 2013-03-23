@@ -1,0 +1,16 @@
+/* Masthead */
+header {
+  .masthead {
+    background: $header-bg;
+    padding: 5em 2% 1em;
+    // height: 125px;
+    // padding-top: 4em;
+
+    .top-logo {
+      background: url(img/vbb_logo@2x.png) no-repeat;
+      background-size: contain;
+      height: 100px;
+      margin: 0 2%;
+    }
+  }
+}

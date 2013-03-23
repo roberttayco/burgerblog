@@ -405,16 +405,22 @@ h1, h2 {
   line-height: 1.2;
   margin: 0 0 0.5em; }
 
+/* Masthead */
 header .masthead {
   background: #638a81;
-  height: 125px;
-  padding-top: 4em; }
+  padding: 5em 2% 1em; }
+  header .masthead .top-logo {
+    background: url(img/vbb_logo@2x.png) no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: 0 2%; }
 
 /* Navigation */
 nav li {
+  display: block;
   float: left;
   list-style: none;
-  margin-left: 2em; }
+  margin-left: 3em; }
   nav li:first-child {
     margin-left: 0; }
 nav a {
@@ -422,16 +428,20 @@ nav a {
 nav.main-nav {
   background: #062534;
   font-size: 0.9625em;
-  padding: 0.3em 0;
-  position: fixed;
-  width: 100%;
-  z-index: 100; }
+  padding: 0.75em 0;
+  width: 100%; }
   nav.main-nav ul {
-    line-height: 4em;
+    line-height: 285%;
     margin: 0 auto;
     max-width: 1100px; }
-  nav.main-nav .home-link {
-    background: url(img/burger.png) no-repeat; }
+  nav.main-nav li.home-link {
+    background: url(img/burger@2x.png) no-repeat;
+    background-size: 100%;
+    height: 40px;
+    width: 26px; }
+    nav.main-nav li.home-link a {
+      display: block;
+      height: 100%; }
 
 /* Latest article "Glamour" section
 ========================= */
@@ -482,6 +492,10 @@ nav.main-nav {
   #glamour .sidekick {
     height: 50%;
     width: 40%; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px; }
 
 .meta a {
   color: #d21452;
@@ -605,21 +619,12 @@ body {
   text-rendering: optimizeLegibility;
   color: #444; }
 
-body.custom-font-enabled {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
-
 a {
   outline: none;
   color: #21759b; }
 
-a:hover {
-  color: #0f3647; }
-
 /* Page structure */
-/* Header */
-/* Navigation Menu */
 /* Banner */
-/* Sidebar */
 /* Footer */
 /* =Media queries
 -------------------------------------------------------------- */
@@ -732,13 +737,19 @@ a:hover {
   .col-12 {
     width: 96%; }
 
+  /* Header
+  ================== */
   header .search {
     width: 25%; }
 
-  .content {
-    margin: 0 auto;
-    max-width: 1100px; }
+  /* Nav
+  ============ */
+  nav.main-nav {
+    position: fixed;
+    z-index: 100; }
 
+  /* Main Content Area
+  ============================ */
   article.recent.col-4 {
     width: 29.33333%; }
     article.recent.col-4 .meta {

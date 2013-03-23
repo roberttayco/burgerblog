@@ -1,0 +1,19 @@
+// Colors
+// ====================
+$nav-bg: #062534;
+$nav-bg-lt: lighten($nav-bg, 20%);
+$nav-bg-dk: darken($nav-bg, 20%);
+
+$header-bg: #638a81; // masthead
+
+$body-bg: #ccdad7; // main content background
+$body-bg-dk: darken($body-bg, 10%); // bg outside main container
+
+$accent: #d21452; // pink
+
+// Type
+// ====================
+$font-stack: 'open sans', 'helvetica neue', sans-serif;
+
+$font-base: 14;
+$em: ($font-base / 16) * 1em; // not entirely sure what the fuck I'm doing right here
