@@ -39,10 +39,12 @@ h5 { font-size: .85em; }
 h6 { font-size: .75em; }
 
 h1,h2 {
+  font-family: $font-header;
   letter-spacing: -1px;
   line-height: 1.2;
   margin: 0 0 .5em;
 }
+
 
 @import "masthead";
 
