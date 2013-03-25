@@ -1,3 +1,13 @@
 /* Footer
 ================== */
-
+footer {
+  background: $nav-bg;
+  color: #fff;
+  font-size: .85em;
+  .logo {
+    background: url(img/vbb_logo@2x.png) no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: 0 2%;
+  }
+}
