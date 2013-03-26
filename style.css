@@ -639,7 +639,8 @@ footer {
     margin: 0 2%; }
 
 #tw-feed {
-  color: #fff; }
+  color: #fff;
+  font-size: .5em; }
 
 /* =Media queries
 -------------------------------------------------------------- */
