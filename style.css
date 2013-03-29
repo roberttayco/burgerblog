@@ -498,6 +498,9 @@ nav.main-nav {
   margin: 0 auto;
   max-width: 1100px; }
 
+.content {
+  padding-top: 2.5em; }
+
 .meta a {
   color: #d21452;
   text-decoration: none; }
@@ -510,15 +513,21 @@ article figure {
   overflow: hidden; }
 article img {
   width: 100%; }
-article.recent figure {
-  float: left;
-  width: 25%; }
-article.recent .meta {
-  float: left;
-  width: 75%; }
-  article.recent .meta .copy {
-    display: none;
-    visibility: hidden; }
+article h2 {
+  font-size: 1.7em; }
+article.recent {
+  height: 400px;
+  margin-bottom: 3em;
+  overflow: hidden; }
+  article.recent figure {
+    float: left;
+    width: 25%; }
+  article.recent .meta {
+    float: left;
+    width: 75%; }
+    article.recent .meta .copy {
+      display: none;
+      visibility: hidden; }
 
 /* Small headers */
 .archive-title,
