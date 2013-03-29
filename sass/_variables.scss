@@ -14,7 +14,12 @@ $accent: #d21452; // pink
 // Type
 // ====================
 $font-stack: 'open sans', 'helvetica neue', sans-serif;
-$font-header: 'headland one', baskerville, georgia, serif;
+$font-header: 'bitter', baskerville, georgia, serif;
+
+// $heading-color: #222;
+$heading-color: #041a25;
+// $copy-color: #444;
+$copy-color: #020f16;
 
 $font-base: 14;
 $em: ($font-base / 16) * 1em; // not entirely sure what the fuck I'm doing right here

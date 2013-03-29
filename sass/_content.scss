@@ -1,0 +1,53 @@
+/* Content section
+================== */
+
+.content { padding-top: 2.5em; }
+.row { margin-bottom: 3em; }
+
+/* Post snippets - General Styles */
+.meta {
+  a {
+    color: $accent;
+    text-decoration: none;
+    h2 & { color: $heading-color; }
+  }
+}
+
+.byline {
+  font-size: .8em;
+  margin-bottom: 1.25em;
+}
+
+/* Recent Posts */
+
+article {
+  figure {
+    // background: $heading-color;
+    // border-top: 2px solid $accent;
+    height: 12 * $em;
+    margin-bottom: .5em;
+    overflow: hidden;
+    // position: relative;
+  }
+  img { width: 100%; }
+
+  &.recent {
+    height: 400px;
+    overflow: hidden;
+    figure {
+      float: left;
+      width: 25%;
+    }
+    .meta {
+      float: left;
+      width: 75%;
+      z-index: 100;
+
+      .copy {
+        display: none;
+        visibility: hidden;
+      }
+    }
+  }
+}
+

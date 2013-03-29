@@ -383,28 +383,34 @@ table {
   width: 96%; }
 
 h1 {
-  font-size: 2.5em; }
+  font-size: 2.7em; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 2.2em; }
 
 h3 {
-  font-size: 1.75em; }
+  font-size: 1.85em; }
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.25em; }
 
 h5 {
-  font-size: .85em; }
+  font-size: .8em; }
 
 h6 {
-  font-size: .75em; }
+  font-size: .7em; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #041a25;
+  margin: 0 0 0.25em; }
 
 h1, h2 {
-  font-family: "headland one", baskerville, georgia, serif;
+  font-family: "bitter", baskerville, georgia, serif;
   letter-spacing: -1px;
-  line-height: 1.2;
-  margin: 0 0 0.5em; }
+  line-height: 1.2; }
+
+p {
+  margin: 0 0 0.75em; }
 
 /* Masthead */
 header .masthead {
@@ -456,17 +462,8 @@ nav.main-nav {
     position: relative;
     -webkit-background-size: cover !important;
     background-size: cover;
-    -webkit-background-position: center;
+    -webkit-background-position: center !important;
     background-position: center; }
-    #glamour .hero a.img-block, #glamour .sidekick a.img-block {
-      background: rgba(0, 0, 0, 0.6);
-      display: block;
-      height: 100%;
-      overflow: hidden;
-      -webkit-transition: background 0.3s;
-      transition: background 0.3s; }
-      #glamour .hero a.img-block:hover, #glamour .sidekick a.img-block:hover {
-        background: rgba(0, 0, 0, 0.4); }
     #glamour .hero .meta, #glamour .sidekick .meta {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -494,37 +491,58 @@ nav.main-nav {
     height: 50%;
     width: 40%; }
 
+a.img-block {
+  background: rgba(4, 26, 37, 0.65);
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s; }
+  a.img-block:hover {
+    background: rgba(0, 0, 0, 0.4); }
+
 .container {
   margin: 0 auto;
   max-width: 1100px; }
 
+/* =Repeatable patterns
+-------------------------------------------------------------- */
+/* Content section
+================== */
 .content {
   padding-top: 2.5em; }
 
+.row {
+  margin-bottom: 3em; }
+
+/* Post snippets - General Styles */
 .meta a {
   color: #d21452;
   text-decoration: none; }
+  h2 .meta a {
+    color: #041a25; }
 
-/* =Repeatable patterns
--------------------------------------------------------------- */
+.byline {
+  font-size: .8em;
+  margin-bottom: 1.25em; }
+
 /* Recent Posts */
 article figure {
   height: 10.5em;
+  margin-bottom: .5em;
   overflow: hidden; }
 article img {
   width: 100%; }
-article h2 {
-  font-size: 1.7em; }
 article.recent {
   height: 400px;
-  margin-bottom: 3em;
   overflow: hidden; }
   article.recent figure {
     float: left;
     width: 25%; }
   article.recent .meta {
     float: left;
-    width: 75%; }
+    width: 75%;
+    z-index: 100; }
     article.recent .meta .copy {
       display: none;
       visibility: hidden; }
@@ -606,18 +624,6 @@ video {
   max-width: 100% !important;
   /* Override the Twitter embed fixed width */ }
 
-.left {
-  float: left; }
-
-.right {
-  float: right; }
-
-/* Images */
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
 /* Author profiles */
 /* =Basic structure
 -------------------------------------------------------------- */
@@ -627,7 +633,7 @@ body {
   font-size: 0.875em;
   font-family: "open sans", "helvetica neue", sans-serif;
   text-rendering: optimizeLegibility;
-  color: #444; }
+  color: #020f16; }
 
 a {
   outline: none;
@@ -656,9 +662,6 @@ footer {
 /* Tablet
 ================== */
 @media screen and (min-width: 768px) {
-  body {
-    background: #336666; }
-
   .col-1 {
     width: 96%; }
 
@@ -723,9 +726,6 @@ footer {
 /* Desktop
 ================== */
 @media screen and (min-width: 960px) {
-  body {
-    background-color: #eecccc; }
-
   .col-1 {
     width: 4.33333%; }
 
@@ -800,6 +800,18 @@ footer {
 /* for IE6/7 */
 .cf {
   *zoom: 1; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/* Images */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 @media print {
   * {

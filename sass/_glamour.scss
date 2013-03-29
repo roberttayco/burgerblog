@@ -11,21 +11,21 @@
     position: relative;
     -webkit-background-size: cover !important;
             background-size: cover;
-    -webkit-background-position: center;
+    -webkit-background-position: center !important;
             background-position: center;
 
-    a.img-block {
-      background: rgba(0,0,0,.6);
-      display: block;
-      height: 100%;
-      overflow: hidden;
-      -webkit-transition: background .3s;
-              transition: background .3s;
+    // a.img-block {
+    //   background: transparentize($heading-color, .35);
+    //   // background: rgba(0,0,0,.6);
+    //   display: block;
+    //   height: 100%;
+    //   overflow: hidden;
+    //   -webkit-transition: background .3s;
+    //           transition: background .3s;
 
-      &:hover { background: rgba(0,0,0,.4); }
-    }
+    //   &:hover { background: rgba(0,0,0,.4); }
+    // }
     .meta {
-      // background: transparentize($accent, .6);
       @include box-sizing;
       color: #eee;
       padding: 0 7%;
@@ -53,4 +53,16 @@
     height: 50%;
     width: 40%;
   }
+}
+
+a.img-block {
+  background: transparentize($heading-color, .35);
+  // background: rgba(0,0,0,.6);
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+
+  &:hover { background: rgba(0,0,0,.4); }
 }

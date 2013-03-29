@@ -31,20 +31,23 @@ $gutter: 2%;
 }
 
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.2em; }
-h5 { font-size: .85em; }
-h6 { font-size: .75em; }
+h1 { font-size: 2.7em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.85em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: .8em; }
+h6 { font-size: .7em; }
 
+h1,h2,h3,h4,h5,h6 {
+  color: $heading-color;
+  margin: 0 0 .25em;
+}
 h1,h2 {
   font-family: $font-header;
   letter-spacing: -1px;
   line-height: 1.2;
-  margin: 0 0 .5em;
 }
-
+p { margin: 0 0 .75em; }
 
 @import "masthead";
 
@@ -56,50 +59,11 @@ h1,h2 {
   margin: 0 auto;
   max-width: 1100px;
 }
-.content {
-  padding-top: 2.5em;
-}
-.meta {
-  a {
-    color: $accent;
-    text-decoration: none;
-  }
-}
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
+@import "content";
 
-/* Recent Posts */
-
-article {
-  figure {
-    height: 12 * $em;
-    overflow: hidden;
-    // position: relative;
-  }
-  img { width: 100%; }
-
-  h2 { font-size: 1.7em; }
-
-  &.recent {
-    height: 400px;
-    margin-bottom: 3em;
-    overflow: hidden;
-    figure {
-      float: left;
-      width: 25%;
-    }
-    .meta {
-      float: left;
-      width: 75%;
-
-      .copy {
-        display: none;
-        visibility: hidden;
-      }
-    }
-  }
-}
 
 /* Small headers */
 .archive-title,
@@ -182,15 +146,6 @@ video {
   max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
 
-.left { float: left; }
-.right { float: right; }
-
-/* Images */
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 
 
@@ -206,7 +161,7 @@ body {
   font-size: $em;
   font-family: $font-stack;
   text-rendering: optimizeLegibility;
-  color: #444;
+  color: $copy-color;
 }
 
 a {
@@ -233,5 +188,15 @@ a:hover {
 
 @include img-replacement;
 @include clearfix;
+
+.left { float: left; }
+.right { float: right; }
+
+/* Images */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @import "print";
