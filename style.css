@@ -511,18 +511,19 @@ a.img-block {
 .byline {
   font-size: .8em; }
 
-/* Recent Posts */
-article .category {
+.category {
   background: #d21452;
   color: #fff;
   display: inline-block;
-  font-size: 0.525em;
+  font-size: 0.65625em;
   font-style: italic;
   padding: 0.4375em 0.875em;
   position: absolute;
   text-transform: uppercase;
   top: 0;
   left: 0; }
+
+/* Recent Posts */
 article figure {
   overflow: hidden;
   position: relative; }
@@ -556,20 +557,30 @@ article.recent {
       line-height: 1.55;
       visibility: hidden; }
 
-/* Small headers */
-.archive-title,
-.page-title,
-.widget-title,
-.entry-content th,
-.comment-content th {
-  font-size: 11px;
-  font-size: 0.785714286rem;
-  line-height: 2.181818182;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #636363; }
+/* Review cards
+=============== */
+.review-card {
+  -webkit-background-position: center !important;
+  background-position: center;
+  -webkit-background-size: cover !important;
+  background-size: cover;
+  color: #fff;
+  float: left;
+  height: 14em;
+  overflow: hidden;
+  position: relative;
+  width: 40%; }
+  .review-card .meta {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    text-align: center;
+    width: 80%; }
+    .review-card .meta h2 {
+      font-size: 1.53125em; }
+      .review-card .meta h2 a {
+        color: #fff; }
 
-/* Shared Post Format styling */
 /* Form fields, general styles first */
 button,
 input,
