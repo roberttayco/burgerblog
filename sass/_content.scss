@@ -22,7 +22,7 @@ article {
     height: 12em;
     overflow: hidden;
     // position: relative;
-    
+
     img { width: 100%; }
   }
 
@@ -36,6 +36,7 @@ article {
 
   &.recent {
     // height: 400px;
+    // margin-bottom: 3em;
     overflow: hidden;
     figure {
       float: left;
@@ -43,6 +44,7 @@ article {
     }
     .meta {
       float: left;
+      position: relative;
       width: 75%;
       z-index: 100;
 
@@ -55,4 +57,8 @@ article {
     }
   }
 }
-
+.overlay {
+position: absolute;
+bottom: 0;
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0, #333, 100%);
+}

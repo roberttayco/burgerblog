@@ -532,6 +532,7 @@ article.recent {
     width: 25%; }
   article.recent .meta {
     float: left;
+    position: relative;
     width: 75%;
     z-index: 100; }
     article.recent .meta .copy {
@@ -539,6 +540,11 @@ article.recent {
       font-size: .9em;
       line-height: 1.55;
       visibility: hidden; }
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, #333333, 100%); }
 
 /* Small headers */
 .archive-title,
@@ -711,7 +717,8 @@ footer {
     height: 12.25em;
     margin-bottom: .5em; }
   article.recent {
-    height: 360px;
+    height: 24.5em;
+    margin-bottom: 3em;
     width: 46%; }
     article.recent figure, article.recent .meta {
       width: 100%; }
@@ -721,14 +728,18 @@ footer {
       display: block;
       visibility: visible; }
     article.recent:last-child {
+      height: 13.125em;
+      margin-bottom: 0;
       width: 96%; }
-      article.recent:last-child .meta {
-        float: right;
-        width: 65%; }
       article.recent:last-child figure {
         float: left;
         height: 100%;
-        width: 30%; } }
+        width: 30%; }
+      article.recent:last-child .meta {
+        border-top: 1px solid #bdcfcb;
+        float: right;
+        padding: 0.875em 0;
+        width: 65%; } }
 /* Desktop
 ================== */
 @media screen and (min-width: 960px) {
@@ -799,16 +810,18 @@ footer {
     border-left: 1px solid #aec5c0;
     border-right: 1px solid #aec5c0; }
 
-  article.recent.col-4 {
-    height: 28em;
-    width: 29.33333%; }
-  article.recent:last-child .meta {
-    float: none;
-    width: 100%; }
-  article.recent:last-child figure {
-    float: none;
-    height: 12.25em;
-    width: 100%; } }
+  article.recent {
+    margin-bottom: 0; }
+    article.recent.col-4 {
+      height: 28em;
+      width: 29.33333%; }
+    article.recent:last-child .meta {
+      float: none;
+      width: 100%; }
+    article.recent:last-child figure {
+      float: none;
+      height: 12.25em;
+      width: 100%; } }
 /* img replacement */
 .ir {
   font: 0/0 a;

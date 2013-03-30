@@ -53,6 +53,7 @@ nav {
 article {
 
   &.recent {
+    margin-bottom: 0;
     &.col-4 {
       height: 32 * $em;
       width: (100% / 3) - 2 * $gutter;

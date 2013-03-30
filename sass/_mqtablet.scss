@@ -38,6 +38,9 @@
 }
 
 /* Recent Posts */
+
+// .row { margin-bottom: 0; }
+
 article {
   figure {
     height: 14 * $em;
@@ -46,7 +49,8 @@ article {
   }
 
   &.recent {
-    height: 360px;
+    height: 28 * $em;
+    margin-bottom: 3em;
     width: (100% / 2) - 2 * $gutter;
 
     figure, .meta { width: 100%; }
@@ -59,17 +63,22 @@ article {
       }
     }
 
-    &:last-child { width: 100% - 2 * $gutter;
+    &:last-child {
+      height: 15 * $em;
+      margin-bottom: 0;
+      width: 100% - 2 * $gutter;
 
-      .meta {
-        float: right;
-        width: 65%;
-      }
-      
       figure {
         float: left;
         height: 100%;
         width: 30%;
+      }
+
+      .meta {
+        border-top: 1px solid darken($body-bg, 5);
+        float: right;
+        padding: $em 0;
+        width: 65%;
       }
     }
   }
