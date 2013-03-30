@@ -33,3 +33,9 @@
                2px 2px 0 $color,
                3px 3px 0 $color;
 }
+
+@mixin article-fade {
+  background-image: -moz-linear-gradient(top, rgba(204,218,215,0) 0, $body-bg 100%);
+  background-image: -webkit-linear-gradient(top, rgba(204,218,215,0) 0, $body-bg 100%);
+  background-image: linear-gradient(top, rgba(204,218,215,0) 0, $body-bg 100%);
+}

@@ -3,11 +3,10 @@
 
 .content {
   background: $body-bg;
-  // border-left: 1px solid darken($body-bg-dk, 5);
-  // border-right: 1px solid darken($body-bg-dk, 5);
   padding-top: 2.5em;
 }
-.row { margin-bottom: 3em; }
+.row { // margin-bottom: 3em;
+}
 
 /* Post snippets - General Styles */
 .meta {}
@@ -16,36 +15,52 @@
 /* Recent Posts */
 
 article {
+  .category {
+    background: $accent;
+    color: #fff;
+    display: inline-block;
+    font-size: .6 * $em;
+    font-style: italic;
+    padding: .5 * $em $em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+  }
   figure {
-    // background: $heading-color;
-    // border-top: 2px solid $accent;
-    height: 12em;
     overflow: hidden;
-    // position: relative;
+    position: relative;
 
     img { width: 100%; }
   }
-
-  h2 a { color: $heading-color;
-    &:hover {
-      color: $accent;
+  h2 {
+    font-size: 1.75 * $em;
+    margin-bottom: 0;
+    a {
+      color: $heading-color;
+      &:hover {
+        color: $accent;
 // I should probably take out the next line or change it even though it's hilarious;
-      @include text-shadow(darken($accent,25));
+        @include text-shadow(darken($accent,25));
+      }
     }
   }
 
   &.recent {
-    // height: 400px;
-    // margin-bottom: 3em;
-    overflow: hidden;
+    height: 6 * $em;
+    margin-bottom: 1.5 * $em;
+    // overflow: hidden;
     figure {
       float: left;
       width: 25%;
     }
     .meta {
-      float: left;
+      border-top: 1px solid darken($body-bg, 5);
+      float: right;
+      overflow: hidden;
+      padding-top: $em;
       position: relative;
-      width: 75%;
+      width: 70%;
       z-index: 100;
 
       .copy {
@@ -56,9 +71,4 @@ article {
       }
     }
   }
-}
-.overlay {
-position: absolute;
-bottom: 0;
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0, #333, 100%);
 }

@@ -53,15 +53,17 @@ nav {
 article {
 
   &.recent {
-    margin-bottom: 0;
-    &.col-4 {
-      height: 32 * $em;
-      width: (100% / 3) - 2 * $gutter;
+
+    &.col-4 { width: (100% / 3) - 2 * $gutter; }
+
+    .meta {
+      height: 18 * $em;
     }
 
       &:last-child {
 
         .meta {
+          border: 0;
           float: none;
           width: 100%;
         }

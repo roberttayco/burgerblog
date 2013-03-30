@@ -507,44 +507,54 @@ a.img-block {
   background: #ccdad7;
   padding-top: 2.5em; }
 
-.row {
-  margin-bottom: 3em; }
-
 /* Post snippets - General Styles */
 .byline {
   font-size: .8em; }
 
 /* Recent Posts */
+article .category {
+  background: #d21452;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.525em;
+  font-style: italic;
+  padding: 0.4375em 0.875em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 0; }
 article figure {
-  height: 12em;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   article figure img {
     width: 100%; }
-article h2 a {
-  color: #041a25; }
-  article h2 a:hover {
-    color: #d21452;
-    text-shadow: 1px 1px 0 #5e0925, 2px 2px 0 #5e0925, 3px 3px 0 #5e0925; }
+article h2 {
+  font-size: 1.53125em;
+  margin-bottom: 0; }
+  article h2 a {
+    color: #041a25; }
+    article h2 a:hover {
+      color: #d21452;
+      text-shadow: 1px 1px 0 #5e0925, 2px 2px 0 #5e0925, 3px 3px 0 #5e0925; }
 article.recent {
-  overflow: hidden; }
+  height: 5.25em;
+  margin-bottom: 1.3125em; }
   article.recent figure {
     float: left;
     width: 25%; }
   article.recent .meta {
-    float: left;
+    border-top: 1px solid #bdcfcb;
+    float: right;
+    overflow: hidden;
+    padding-top: 0.875em;
     position: relative;
-    width: 75%;
+    width: 70%;
     z-index: 100; }
     article.recent .meta .copy {
       display: none;
       font-size: .9em;
       line-height: 1.55;
       visibility: hidden; }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, #333333, 100%); }
 
 /* Small headers */
 .archive-title,
@@ -713,32 +723,56 @@ footer {
     width: 40%; }
 
   /* Recent Posts */
+  article h2 {
+    font-size: 1.96875em;
+    margin-bottom: 0.21875em; }
   article figure {
     height: 12.25em;
-    margin-bottom: .5em; }
+    margin-bottom: 0.65625em;
+    position: relative; }
   article.recent {
-    height: 24.5em;
     margin-bottom: 3em;
+    height: auto;
     width: 46%; }
     article.recent figure, article.recent .meta {
       width: 100%; }
     article.recent figure {
       float: none; }
-    article.recent .meta .copy {
-      display: block;
-      visibility: visible; }
+    article.recent .meta {
+      border: 0;
+      float: none;
+      height: 14em;
+      overflow: hidden;
+      padding-top: 0;
+      width: 100%; }
+      article.recent .meta:after {
+        background-image: -moz-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
+        background-image: -webkit-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
+        background-image: linear-gradient(top, rgba(204, 218, 215, 0) 0%, #ccdad7 100%);
+        background-size: 100%;
+        bottom: 0;
+        left: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 30%;
+        width: 100%; }
+      article.recent .meta .copy {
+        display: block;
+        visibility: visible; }
     article.recent:last-child {
-      height: 13.125em;
-      margin-bottom: 0;
+      height: 14em;
       width: 96%; }
       article.recent:last-child figure {
         float: left;
-        height: 100%;
+        height: auto;
+        margin-bottom: 0;
         width: 30%; }
       article.recent:last-child .meta {
         border-top: 1px solid #bdcfcb;
         float: right;
-        padding: 0.875em 0;
+        height: 14em;
+        padding-top: 0.875em;
         width: 65%; } }
 /* Desktop
 ================== */
@@ -810,18 +844,18 @@ footer {
     border-left: 1px solid #aec5c0;
     border-right: 1px solid #aec5c0; }
 
-  article.recent {
-    margin-bottom: 0; }
-    article.recent.col-4 {
-      height: 28em;
-      width: 29.33333%; }
-    article.recent:last-child .meta {
-      float: none;
-      width: 100%; }
-    article.recent:last-child figure {
-      float: none;
-      height: 12.25em;
-      width: 100%; } }
+  article.recent.col-4 {
+    width: 29.33333%; }
+  article.recent .meta {
+    height: 15.75em; }
+  article.recent:last-child .meta {
+    border: 0;
+    float: none;
+    width: 100%; }
+  article.recent:last-child figure {
+    float: none;
+    height: 12.25em;
+    width: 100%; } }
 /* img replacement */
 .ir {
   font: 0/0 a;
