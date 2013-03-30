@@ -32,6 +32,27 @@ nav {
   }
 }
 
+/* Glamour */
+
+#glamour {
+  // background: #000;
+  // height: 480px;
+  // width: 100%;
+
+  .hero, .sidekick {
+    height: 100%;
+    width: 33.3333%;
+
+    h2 { font-size: 3em; }
+  }
+  // .sidekick {
+  //   height: 50%;
+  //   width: 40%;
+  // }
+}
+
+
+
 /* Main Content Area
 ============================ */
 // .container {
@@ -39,20 +60,26 @@ nav {
 //   max-width: 1100px;
 // }
 
-
-article.recent.col-4 {
-  width: (100% / 3) - 2 * $gutter;
-  .meta {
-    width: 100%;
-  }
-  figure {
-    float: none;
-    height: 14 * $em;
-    overflow: hidden;
-    width: 100%;
-  }
+.content {
+  border-left: 1px solid darken($body-bg-dk, 5);
+  border-right: 1px solid darken($body-bg-dk, 5);
 }
 
+article.recent {
+  height: 400px;
+  &.col-4 {
+    width: (100% / 3) - 2 * $gutter;
+    .meta {
+      width: 100%;
+    }
+    figure {
+      float: none;
+      height: 14 * $em;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+}
 
 
 }

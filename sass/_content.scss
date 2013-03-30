@@ -1,17 +1,16 @@
 /* Content section
 ================== */
 
-.content { padding-top: 2.5em; }
+.content {
+  background: $body-bg;
+  // border-left: 1px solid darken($body-bg-dk, 5);
+  // border-right: 1px solid darken($body-bg-dk, 5);
+  padding-top: 2.5em;
+}
 .row { margin-bottom: 3em; }
 
 /* Post snippets - General Styles */
-.meta {
-  a {
-    color: $accent;
-    text-decoration: none;
-    h2 & { color: $heading-color; }
-  }
-}
+.meta {}
 
 .byline {
   font-size: .8em;
@@ -31,8 +30,12 @@ article {
   }
   img { width: 100%; }
 
+  h2 a { color: $heading-color;
+    &:hover { color: $accent; }
+  }
+
   &.recent {
-    height: 400px;
+    // height: 400px;
     overflow: hidden;
     figure {
       float: left;

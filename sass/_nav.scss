@@ -7,14 +7,21 @@ nav {
     margin-left: 3em;
     &:first-child { margin-left: 0; }
   }
-  a { text-decoration: none; }
 
   &.main-nav {
     // $nav-height: 4em;
     background: $nav-bg;
+    box-shadow: 0 3px 16px rgba(0,0,0,.5);
     font-size: 1.1 * $em;
     padding: .75em 0;
     width: 100%;
+
+    a {
+      color: $nav-bg-lt;
+      display: block;
+      height: 100%;
+      &:hover { color: $accent; }
+    }
 
     ul {
       line-height: 285%;
@@ -30,11 +37,6 @@ nav {
         height: 40px;
         width: 26px;
 
-        a {
-          display: block;
-          height: 100%;
-
-        }
       }
     }
   }

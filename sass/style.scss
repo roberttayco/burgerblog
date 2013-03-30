@@ -166,7 +166,10 @@ body {
 
 a {
   outline: none;
-  color: #21759b;
+  color: $accent;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 a:hover {
   // color: #0f3647;

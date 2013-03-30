@@ -1,13 +1,14 @@
 // Colors
 // ====================
 $nav-bg: #062534;
-$nav-bg-lt: lighten($nav-bg, 20%);
+$nav-bg-lt: #accbda;
 $nav-bg-dk: darken($nav-bg, 20%);
 
 $header-bg: #638a81; // masthead
 
 $body-bg: #ccdad7; // main content background
-$body-bg-dk: darken($body-bg, 10%); // bg outside main container
+// $body-bg: #d6e1df; // main content background
+$body-bg-dk: darken($body-bg, 5); // bg outside main container
 
 $accent: #d21452; // pink
 
