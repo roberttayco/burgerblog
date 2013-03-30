@@ -61,10 +61,12 @@ article {
     }
 
       &:last-child {
-
+        height: auto;
+        
         .meta {
           border: 0;
           float: none;
+          height: 18 * $em;
           width: 100%;
         }
 

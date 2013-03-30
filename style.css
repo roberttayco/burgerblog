@@ -848,14 +848,17 @@ footer {
     width: 29.33333%; }
   article.recent .meta {
     height: 15.75em; }
-  article.recent:last-child .meta {
-    border: 0;
-    float: none;
-    width: 100%; }
-  article.recent:last-child figure {
-    float: none;
-    height: 12.25em;
-    width: 100%; } }
+  article.recent:last-child {
+    height: auto; }
+    article.recent:last-child .meta {
+      border: 0;
+      float: none;
+      height: 15.75em;
+      width: 100%; }
+    article.recent:last-child figure {
+      float: none;
+      height: 12.25em;
+      width: 100%; } }
 /* img replacement */
 .ir {
   font: 0/0 a;
