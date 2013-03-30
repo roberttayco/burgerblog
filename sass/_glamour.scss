@@ -9,6 +9,9 @@
     float: left;
     overflow: hidden;
     position: relative;
+    height: 33.333%;
+    width: 100%;
+
     -webkit-background-size: cover !important;
             background-size: cover;
     -webkit-background-position: center !important;
@@ -30,7 +33,7 @@
       color: #eee;
       padding: 0 7%;
       position: absolute;
-      bottom: 15%;
+      bottom: 5%;
       left: 10%;
       text-align: center;
       width: 80%;
@@ -43,16 +46,16 @@
       p { font-size: .8em; }
     }
   }
-  .hero {
-    height: 100%;
-    width: 60%;
+  // .hero {
+  //   height: 100%;
+  //   width: 60%;
 
-    h2 { font-size: 3.5em; }
-  }
-  .sidekick {
-    height: 50%;
-    width: 40%;
-  }
+  //   h2 { font-size: 3.5em; }
+  // }
+  // .sidekick {
+  //   height: 50%;
+  //   width: 40%;
+  // }
 }
 
 a.img-block {

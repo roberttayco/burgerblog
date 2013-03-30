@@ -415,7 +415,7 @@ p {
 /* Masthead */
 header .masthead {
   background: #638a81;
-  padding: 5em 2% 1em; }
+  padding: 1em 2%; }
   header .masthead .logo {
     background: url(img/vbb_logo@2x.png) no-repeat;
     background-size: contain;
@@ -462,6 +462,8 @@ nav.main-nav {
     float: left;
     overflow: hidden;
     position: relative;
+    height: 33.333%;
+    width: 100%;
     -webkit-background-size: cover !important;
     background-size: cover;
     -webkit-background-position: center !important;
@@ -473,7 +475,7 @@ nav.main-nav {
       color: #eee;
       padding: 0 7%;
       position: absolute;
-      bottom: 15%;
+      bottom: 5%;
       left: 10%;
       text-align: center;
       width: 80%;
@@ -484,14 +486,6 @@ nav.main-nav {
           color: #fff; }
       #glamour .hero .meta p, #glamour .sidekick .meta p {
         font-size: .8em; }
-  #glamour .hero {
-    height: 100%;
-    width: 60%; }
-    #glamour .hero h2 {
-      font-size: 3.5em; }
-  #glamour .sidekick {
-    height: 50%;
-    width: 40%; }
 
 a.img-block {
   background: rgba(4, 26, 37, 0.65);
@@ -699,6 +693,18 @@ footer {
   .col-12 {
     width: 96%; }
 
+  /* Glamour section */
+  #glamour .hero .meta, #glamour .sidekick .meta {
+    bottom: 12%; }
+  #glamour .hero {
+    height: 100%;
+    width: 60%; }
+    #glamour .hero h2 {
+      font-size: 3.5em; }
+  #glamour .sidekick {
+    height: 50%;
+    width: 40%; }
+
   /* Recent Posts */
   article figure {
     height: 12.25em;
@@ -768,6 +774,8 @@ footer {
   ================== */
   header .search {
     width: 25%; }
+  header .masthead {
+    padding: 5em 2% 1em; }
 
   /* Nav
   ============ */

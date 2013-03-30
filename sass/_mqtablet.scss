@@ -18,6 +18,23 @@
   }
 }
 
+/* Glamour section */
+
+#glamour {
+  .hero, .sidekick {
+    .meta { bottom: 12%; }
+  }
+  .hero {
+    height: 100%;
+    width: 60%;
+
+    h2 { font-size: 3.5em; }
+  }
+  .sidekick {
+    height: 50%;
+    width: 40%;
+  }
+}
 
 /* Recent Posts */
 article {
