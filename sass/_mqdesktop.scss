@@ -2,30 +2,28 @@
 ================== */
 @media screen and (min-width: 960px) {
 
-  // body { background-color: #eecccc; }
-
-// Grid
-// ======================
+/* Grid
+---------------------- */
 @for $i from 1 through $cols {
   .col-#{$i} {
     width: (100% - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
     @extend %columns;    
   }
 } 
+
 /* Header
-================== */
+------------------ */
 header {
   .search {
     width: 25%;
   }
   .masthead {
-    // padding: 5em 5% 1em;
-    padding: 5em $gutter 1em;
+    padding: 5.5em $gutter 1.2em;
   }
 }
 
 /* Nav
-============ */
+------------ */
 nav {
   &.main-nav {
     position: fixed;
@@ -33,54 +31,58 @@ nav {
   }
 }
 
-/* Glamour */
-
+/* Glamour Section
+------------------ */
 #glamour {
-  // background: #000;
-  // height: 480px;
-  // width: 100%;
-
+  height: 32 * $em;
   .hero, .sidekick {
     height: 100%;
     width: 33.3333%;
 
     h2 { font-size: 3em; }
   }
-  // .sidekick {
-  //   height: 50%;
-  //   width: 40%;
-  // }
 }
 
-
-
 /* Main Content Area
-============================ */
-// .container {
-//   margin: 0 auto;
-//   max-width: 1100px;
-// }
-
+---------------------------- */
 .content {
   border-left: 1px solid darken($body-bg-dk, 5);
   border-right: 1px solid darken($body-bg-dk, 5);
 }
 
-article.recent {
-  height: 400px;
-  &.col-4 {
-    width: (100% / 3) - 2 * $gutter;
-    .meta {
-      width: 100%;
+article {
+
+  &.recent {
+    &.col-4 {
+      height: 32 * $em;
+      width: (100% / 3) - 2 * $gutter;
     }
-    figure {
-      float: none;
-      height: 14 * $em;
-      overflow: hidden;
-      width: 100%;
-    }
+
+      &:last-child {
+
+        .meta {
+          float: none;
+          width: 100%;
+        }
+
+        figure {
+          float: none;
+          height: 14 * $em;
+          width: 100%;
+        }
+      }
+
+    
   }
-}
+
+
+      // figure {
+      //   float: none;
+      //   width: 100%;
+      // }
+
+  }
+
 
 
 }

@@ -475,7 +475,7 @@ nav.main-nav {
       color: #eee;
       padding: 0 7%;
       position: absolute;
-      bottom: 5%;
+      bottom: 8%;
       left: 10%;
       text-align: center;
       width: 80%;
@@ -493,7 +493,7 @@ a.img-block {
   height: 100%;
   overflow: hidden; }
   a.img-block:hover {
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(4, 26, 37, 0.4); }
 
 .container {
   margin: 0 auto;
@@ -512,20 +512,19 @@ a.img-block {
 
 /* Post snippets - General Styles */
 .byline {
-  font-size: .8em;
-  margin-bottom: 1.25em; }
+  font-size: .8em; }
 
 /* Recent Posts */
 article figure {
-  height: 10.5em;
-  margin-bottom: .5em;
+  height: 12em;
   overflow: hidden; }
-article img {
-  width: 100%; }
+  article figure img {
+    width: 100%; }
 article h2 a {
   color: #041a25; }
   article h2 a:hover {
-    color: #d21452; }
+    color: #d21452;
+    text-shadow: 1px 1px 0 #5e0925, 2px 2px 0 #5e0925, 3px 3px 0 #5e0925; }
 article.recent {
   overflow: hidden; }
   article.recent figure {
@@ -537,6 +536,8 @@ article.recent {
     z-index: 100; }
     article.recent .meta .copy {
       display: none;
+      font-size: .9em;
+      line-height: 1.55;
       visibility: hidden; }
 
 /* Small headers */
@@ -708,12 +709,17 @@ footer {
   /* Recent Posts */
   article figure {
     height: 12.25em;
-    overflow: hidden; }
-  article img {
-    width: 100%; }
+    margin-bottom: .5em; }
   article.recent {
     height: 360px;
     width: 46%; }
+    article.recent figure, article.recent .meta {
+      width: 100%; }
+    article.recent figure {
+      float: none; }
+    article.recent .meta .copy {
+      display: block;
+      visibility: visible; }
     article.recent:last-child {
       width: 96%; }
       article.recent:last-child .meta {
@@ -722,18 +728,12 @@ footer {
       article.recent:last-child figure {
         float: left;
         height: 100%;
-        width: 30%; }
-    article.recent figure {
-      float: none;
-      width: 100%; }
-    article.recent .meta {
-      width: 100%; }
-      article.recent .meta .copy {
-        display: block;
-        visibility: visible; } }
+        width: 30%; } }
 /* Desktop
 ================== */
 @media screen and (min-width: 960px) {
+  /* Grid
+  ---------------------- */
   .col-1 {
     width: 4.33333%; }
 
@@ -771,42 +771,44 @@ footer {
     width: 96%; }
 
   /* Header
-  ================== */
+  ------------------ */
   header .search {
     width: 25%; }
   header .masthead {
-    padding: 5em 2% 1em; }
+    padding: 5.5em 2% 1.2em; }
 
   /* Nav
-  ============ */
+  ------------ */
   nav.main-nav {
     position: fixed;
     z-index: 100; }
 
-  /* Glamour */
-  #glamour .hero, #glamour .sidekick {
-    height: 100%;
-    width: 33.3333%; }
-    #glamour .hero h2, #glamour .sidekick h2 {
-      font-size: 3em; }
+  /* Glamour Section
+  ------------------ */
+  #glamour {
+    height: 28em; }
+    #glamour .hero, #glamour .sidekick {
+      height: 100%;
+      width: 33.3333%; }
+      #glamour .hero h2, #glamour .sidekick h2 {
+        font-size: 3em; }
 
   /* Main Content Area
-  ============================ */
+  ---------------------------- */
   .content {
     border-left: 1px solid #aec5c0;
     border-right: 1px solid #aec5c0; }
 
-  article.recent {
-    height: 400px; }
-    article.recent.col-4 {
-      width: 29.33333%; }
-      article.recent.col-4 .meta {
-        width: 100%; }
-      article.recent.col-4 figure {
-        float: none;
-        height: 12.25em;
-        overflow: hidden;
-        width: 100%; } }
+  article.recent.col-4 {
+    height: 28em;
+    width: 29.33333%; }
+  article.recent:last-child .meta {
+    float: none;
+    width: 100%; }
+  article.recent:last-child figure {
+    float: none;
+    height: 12.25em;
+    width: 100%; } }
 /* img replacement */
 .ir {
   font: 0/0 a;

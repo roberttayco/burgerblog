@@ -33,7 +33,7 @@
       color: #eee;
       padding: 0 7%;
       position: absolute;
-      bottom: 5%;
+      bottom: 8%;
       left: 10%;
       text-align: center;
       width: 80%;
@@ -60,12 +60,9 @@
 
 a.img-block {
   background: transparentize($heading-color, .35);
-  // background: rgba(0,0,0,.6);
   display: block;
   height: 100%;
   overflow: hidden;
-  // -webkit-transition: background .3s;
-  // transition: background .3s;
 
-  &:hover { background: rgba(0,0,0,.4); }
+  &:hover { background: transparentize($heading-color, .6); }
 }
