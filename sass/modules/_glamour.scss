@@ -59,10 +59,10 @@
 }
 
 a.img-block {
-  background: transparentize($heading-color, .35);
+  background: transparentize($color-heading, .35);
   display: block;
   height: 100%;
   overflow: hidden;
 
-  &:hover { background: transparentize($heading-color, .6); }
+  &:hover { background: transparentize($color-heading, .6); }
 }

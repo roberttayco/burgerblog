@@ -1,0 +1,49 @@
+// Colors
+// ====================
+$nav-bg: #062534;
+$nav-bg-lt: #accbda;
+$nav-bg-dk: darken($nav-bg, 20%);
+
+$header-bg: #638a81; // masthead
+
+$body-bg: #ccdad7; // main content background
+// $body-bg: #d6e1df; // main content background
+$body-bg-dk: darken($body-bg, 5); // bg outside main container
+
+$accent: #d21452; // pink
+
+// Type
+// ====================
+$font-stack: 'open sans', 'helvetica neue', sans-serif;
+$font-header: 'bitter', baskerville, georgia, serif;
+
+$color-heading: #041a25;
+$color-copy: #020f16;
+
+$font-base: 14;
+$em: ($font-base / 16) * 1em; // not entirely sure what the fuck I'm doing right here
+
+$font-heavy: 900;
+$font-bold: 700;
+$font-normal: 300;
+$font-light: 200;
+
+// Mixins
+// =====================
+@mixin box-sizing {
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@mixin text-shadow($color) {
+  text-shadow: 1px 1px 0 $color,
+               2px 2px 0 $color,
+               3px 3px 0 $color;
+}
+
+@mixin article-fade {
+  background-image: -moz-linear-gradient(top, transparentize($body-bg, 1) 0, $body-bg 100%);
+  background-image: -webkit-linear-gradient(top, transparentize($body-bg, 1) 0, $body-bg 100%);
+  background-image: linear-gradient(top, transparentize($body-bg, 1) 0, $body-bg 100%);
+}

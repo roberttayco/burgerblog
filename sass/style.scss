@@ -7,10 +7,9 @@ Version: 2.0
 Text Domain: vegasburgerblog
 */
 
-@import "mixins";
+@import "config";
 @import "normalize";
-@import "variables";
-
+@import "layout";
 
 // Grid
 // =================
@@ -30,41 +29,19 @@ $gutter: 2%;
   }
 }
 
+@import "typography";
 
-h1 { font-size: 2.7em; }
-h2 { font-size: 2.2em; }
-h3 { font-size: 1.85em; }
-h4 { font-size: 1.25em; }
-h5 { font-size: .8em; }
-h6 { font-size: .7em; }
 
-h1,h2,h3,h4,h5,h6 {
-  color: $heading-color;
-  margin: 0 0 .25em;
-}
-h1,h2 {
-  font-family: $font-header;
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
-p { margin: 0 0 .75em; }
+@import "modules/masthead";
+@import "modules/nav";
+@import "modules/glamour";
 
-@import "masthead";
-
-@import "nav";
-
-@import "glamour";
-
-.container {
-  margin: 0 auto;
-  max-width: 1100px;
-}
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
 @import "content";
-
-@import "review-cards";
+@import "modules/recentposts";
+@import "modules/review-cards";
 
 /* Form fields, general styles first */
 button,
@@ -100,24 +77,7 @@ input[type="color"] {
 
 /* Buttons */
 
-/* Responsive images */
-.entry-content img,
-.comment-content img,
-.widget img {
-  max-width: 100%; /* Fluid images for posts, comments, and widgets */
-}
-img[class*="align"],
-img[class*="wp-image-"],
-img[class*="attachment-"] {
-  height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-img.size-full,
-img.size-large,
-img.header-image,
-img.wp-post-image {
-  max-width: 100%;
-  height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
+@import "figures";
 
 /* Make sure videos and embeds fit their containers */
 embed,
@@ -129,8 +89,6 @@ video {
 .entry-content .twitter-tweet-rendered {
   max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
-
-
 
 
 /* Author profiles */
@@ -145,7 +103,7 @@ body {
   font-size: $em;
   font-family: $font-stack;
   text-rendering: optimizeLegibility;
-  color: $copy-color;
+  color: $color-copy;
 }
 
 a {
@@ -153,10 +111,9 @@ a {
   color: $accent;
   text-decoration: none;
   -webkit-transition: all .2s;
-  transition: all .2s;
-}
-a:hover {
-  // color: #0f3647;
+          transition: all .2s;
+
+  &:hover {}
 }
 
 
@@ -170,14 +127,8 @@ a:hover {
 -------------------------------------------------------------- */
 
 @import "mqtablet";
-
 @import "mqdesktop";
 
-@include img-replacement;
-@include clearfix;
-
-.left { float: left; }
-.right { float: right; }
 
 /* Images */
 .aligncenter {
@@ -185,5 +136,5 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
+@import "utility";
 @import "print";
