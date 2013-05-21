@@ -1,14 +1,19 @@
 /* Recent Posts */
 
 article {
+  overflow: hidden;
+
   figure {
-    overflow: hidden;
     position: relative;
 
-    img { width: 100%; }
+    img {
+      height: auto;
+      max-width: 100%;
+    }
   }
+
   h2 {
-    font-size: 1.75 * $em;
+    font-size: 1.75em;
     margin-bottom: 0;
     a {
       color: $color-heading;
@@ -21,19 +26,20 @@ article {
   }
 
   &.recent {
-    height: 6 * $em;
-    margin-bottom: 1.5 * $em;
-    // overflow: hidden;
+    height: 6em;
+    margin-bottom: 1.5em;
+
     figure {
       float: left;
+      margin-right: 5%;
       width: 25%;
     }
     .meta {
       border-top: 1px solid darken($body-bg, 5);
-      float: right;
+      float: left;
       overflow: hidden;
       padding-top: $em;
-      position: relative;
+      // position: relative;
       width: 70%;
 
       .copy {

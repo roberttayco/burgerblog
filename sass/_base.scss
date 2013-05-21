@@ -1,0 +1,20 @@
+/* Body, links, basics */
+html {}
+body {
+  background: $body-bg-dk;
+  font-size: $em;
+  font-family: $font-stack;
+  text-rendering: optimizeLegibility;
+  color: $color-copy;
+}
+
+a {
+  outline: none;
+  color: $accent;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+          transition: all .2s;
+
+  &:hover {}
+}
+

@@ -4,12 +4,12 @@
 
 /* Grid
 ---------------------- */
-@for $i from 1 through $cols {
-  .col-#{$i} {
-    width: (100% - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
-    @extend %columns;    
-  }
-} 
+// @for $i from 1 through $cols {
+//   .col-#{$i} {
+//     width: (100% - ($gutter * (2 * (($cols / $i) - 1) + 2))) / ($cols / $i);
+//     @extend %columns;    
+//   }
+// } 
 
 /* Header
 ------------------ */
@@ -33,15 +33,15 @@ nav {
 
 /* Glamour Section
 ------------------ */
-#glamour {
-  height: 32 * $em;
-  .hero, .sidekick {
-    height: 100%;
-    width: 33.3333%;
+// #glamour {
+//   height: 32 * $em;
+//   .hero, .sidekick {
+//     height: 100%;
+//     width: 33.3333%;
 
-    h2 { font-size: 3em; }
-  }
-}
+//     h2 { font-size: 3em; }
+//   }
+// }
 
 /* Main Content Area
 ---------------------------- */

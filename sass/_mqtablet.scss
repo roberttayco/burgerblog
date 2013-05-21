@@ -7,16 +7,16 @@
 // grid system
 // ======================
  
-@for $i from 1 through $cols {
-  .col-#{$i} {
-    @if $i == $cols / 4 { width: (100% / 2) - 2 * $gutter; }
-    @else if $i == $cols / 3 { width: (100% / 3) - 2 * $gutter; }
-    @else if $i == 2 * ($cols / 3) { width: 2 * (100% / 3) - 2 * $gutter; }
-    @else if $i == $cols / 2 { width: (100% / 2) - 2 * $gutter; }
-    @else { width: 100% - 2 * $gutter; }
-    @extend %columns;    
-  }
-}
+// @for $i from 1 through $cols {
+//   .col-#{$i} {
+//     @if $i == $cols / 4 { width: (100% / 2) - 2 * $gutter; }
+//     @else if $i == $cols / 3 { width: (100% / 3) - 2 * $gutter; }
+//     @else if $i == 2 * ($cols / 3) { width: 2 * (100% / 3) - 2 * $gutter; }
+//     @else if $i == $cols / 2 { width: (100% / 2) - 2 * $gutter; }
+//     @else { width: 100% - 2 * $gutter; }
+//     @extend %columns;    
+//   }
+// }
 
 /* Glamour section */
 
@@ -25,16 +25,16 @@
   .hero, .sidekick {
     .meta { bottom: 12%; }
   }
-  .hero {
-    height: 100%;
-    width: 60%;
+  // .hero {
+  //   height: 100%;
+  //   width: 60%;
 
-    h2 { font-size: 3.5em; }
-  }
-  .sidekick {
-    height: 50%;
-    width: 40%;
-  }
+  //   h2 { font-size: 3.5em; }
+  // }
+  // .sidekick {
+  //   height: 50%;
+  //   width: 40%;
+  // }
 }
 
 /* Recent Posts */

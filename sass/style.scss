@@ -13,32 +13,28 @@ Text Domain: vegasburgerblog
 
 // Grid
 // =================
-$cols: 12;
-$gutter: 2%;
+// This thing needs to go
+// $cols: 12;
+// $gutter: 2%;
 
-%columns {
-  @include box-sizing;
-  float: left;
-  margin: 0 $gutter;
-  overflow: hidden;
-}
-@for $i from 1 through $cols {
-  .col-#{$i} {
-    width: 100% - 2 * $gutter; // mobile -> everything goes full width
-    @extend %columns;
-  }
-}
+// %columns {
+//   float: left;
+//   margin: 0 $gutter;
+//   overflow: hidden;
+// }
+// @for $i from 1 through $cols {
+//   .col-#{$i} {
+//     width: 100% - 2 * $gutter; // mobile -> everything goes full width
+//     @extend %columns;
+//   }
+// }
 
 @import "typography";
-
 
 @import "modules/masthead";
 @import "modules/nav";
 @import "modules/glamour";
 
-
-/* =Repeatable patterns
--------------------------------------------------------------- */
 @import "content";
 @import "modules/recentposts";
 @import "modules/review-cards";
@@ -80,41 +76,18 @@ input[type="color"] {
 @import "figures";
 
 /* Make sure videos and embeds fit their containers */
-embed,
-iframe,
-object,
-video {
-  max-width: 100%;
-}
+embed, iframe, object, video { max-width: 100%; }
 .entry-content .twitter-tweet-rendered {
   max-width: 100% !important; /* Override the Twitter embed fixed width */
 }
-
 
 /* Author profiles */
 
 /* =Basic structure
 -------------------------------------------------------------- */
 
-/* Body, links, basics */
-html {}
-body {
-  background: $body-bg-dk;
-  font-size: $em;
-  font-family: $font-stack;
-  text-rendering: optimizeLegibility;
-  color: $color-copy;
-}
+@import "base";
 
-a {
-  outline: none;
-  color: $accent;
-  text-decoration: none;
-  -webkit-transition: all .2s;
-          transition: all .2s;
-
-  &:hover {}
-}
 
 
 /* Page structure */

@@ -1,16 +1,12 @@
 /* Content section
 ================== */
 
-.content {
-  background: $body-bg;
-  padding-top: 2.5em;
-}
-.row { // margin-bottom: 3em;
-}
-
 /* Post snippets - General Styles */
 .meta {}
-.byline { font-size: .8em; }
+.byline {
+  font-size: .8em;
+  font-style: italic;
+}
 .category {
   background: $accent;
   color: #fff;
