@@ -3,8 +3,44 @@
 article {
   overflow: hidden;
 
+  @media screen and (min-width: 600px) {
+    float: left;
+    width: 48%;
+
+    &:first-child { margin-right: 4%; }
+
+    &:last-child {
+      margin: 0;
+      width: 100%;
+
+      figure {
+        float: left;
+        width: 30%;
+      }
+      .meta {
+        float: right;
+        margin: 0;
+        width: 65%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    // float: left;
+    margin-left: 2%;
+    width: 32%;
+
+    &:first-child { margin-left: 0; }
+  }
+
   figure {
+    overflow: hidden;
     position: relative;
+
+    @media screen and (min-width: 600px) {
+      height: 14em;
+      margin-bottom: .75em;
+    }
 
     img {
       height: auto;
@@ -13,8 +49,15 @@ article {
   }
 
   h2 {
-    font-size: 1.75em;
-    margin-bottom: 0;
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: .15em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2.25em;
+      margin-bottom: .25em;
+    }
+
     a {
       color: $color-heading;
       &:hover {
@@ -25,29 +68,71 @@ article {
     }
   }
 
-  &.recent {
-    height: 6em;
-    margin-bottom: 1.5em;
+}
+.post-recent, .post-older { margin-bottom: 1.5em; }
 
-    figure {
-      float: left;
-      margin-right: 5%;
-      width: 25%;
+.post-recent {
+  height: 6em;
+
+  @media screen and (min-width: 600px) {
+    height: auto;
+    margin-bottom: 3em;
+  }
+
+  figure {
+    float: left;
+    margin-right: 5%;
+    width: 25%;
+
+    @media screen and (min-width: 600px) {
+      // float: none;
+      width: 100%;
     }
-    .meta {
-      border-top: 1px solid darken($body-bg, 5);
-      float: left;
-      overflow: hidden;
-      padding-top: $em;
-      // position: relative;
-      width: 70%;
+  }
 
-      .copy {
-        display: none;
-        font-size: .9em;
-        line-height: 1.55;
-        visibility: hidden;
+  .meta {
+    border-top: 1px solid darken($body-bg, 5);
+    float: left;
+    overflow: hidden;
+    padding-top: 1em;
+    position: relative;
+    width: 70%;
+
+    @media screen and (min-width: 600px) {
+      border: 0;
+      height: 16em;
+      padding-top: 0;
+      width: 100%;
+
+      &:after {
+        @include article-fade;
+        background-size: 100%;
+        bottom: 0;
+        left: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 30%;
+        width: 100%;
       }
     }
   }
+
+  .copy {
+    font-size: .9em;
+    visibility: hidden;
+
+    @media screen and (min-width: 600px) {
+      visibility: visible;
+    }
+  }
+}
+
+.post-older {
+  border-top: 1px solid darken($body-bg, 5);
+  font-size: .875em;
+  padding-top: 1em;
+  text-align: center;
+
+  &:first-child { border: 0; }
 }

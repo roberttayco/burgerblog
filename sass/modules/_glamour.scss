@@ -44,18 +44,15 @@
   -webkit-background-position: center;
           background-position: center;
 
-  @media screen and (min-width: 768px) { float: left; }
+  @media screen and (min-width: 768px) {
+    float: left;
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 768px) {
-   .hero {
-    height: 100%;
-    width: 60%;
-  } 
-  .sidekick {
-    height: 50%;
-    width: 40%;
-  }
+  .hero { height: 100%; } 
+  .sidekick { height: 50%; }
 }
 
 @media screen and (min-width: 960px) {

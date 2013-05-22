@@ -43,51 +43,50 @@
 
 article {
 
-  h2 {
-    font-size: 2.25 * $em;
-    margin-bottom: .25 * $em;
-  }
+  // h2 {
+  //   font-size: 2.25 * $em;
+  //   margin-bottom: .25 * $em;
+  // }
 
-  figure {
-    height: 14 * $em;
-    margin-bottom: .75 * $em;
-    position: relative;
-  }
+  // figure {
+  //   height: 14 * $em;
+  //   margin-bottom: .75 * $em;
+  // }
 
-  &.recent {
-    margin-bottom: 3em;
-    height: auto;
-    width: (100% / 2) - 2 * $gutter;
+  &.post-recent {
+    // margin-bottom: 3em;
+    // height: auto;
+    // width: (100% / 2) - 2 * $gutter;
 
-    figure, .meta { width: 100%; }
-    figure { float: none; }
+    // figure, .meta { width: 100%; }
+    // figure { float: none; }
 
     .meta {
-      border: 0;
-      float: none;
-      height: 16 * $em;
-      overflow: hidden;
-      padding-top: 0;
+      // border: 0;
+      // float: none;
+      // height: 16 * $em;
+      // overflow: hidden;
+      // padding-top: 0;
       // position: relative;
-      width: 100%;
+      // width: 100%;
 
-      &:after {
-        @include article-fade;
-        background-size: 100%;
-        bottom: 0;
-        left: 0;
-        content: '';
-        display: block;
-        position: absolute;
-        height: 30%;
-        width: 100%;
-      }
-      .copy {
-        display: block;
-        visibility: visible;
-      }
+      // &:after {
+      //   @include article-fade;
+      //   background-size: 100%;
+      //   bottom: 0;
+      //   left: 0;
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   height: 30%;
+      //   width: 100%;
+      // }
+      // .copy {
+      //   display: block;
+      //   visibility: visible;
+      // }
     }
-
+/* 
     &:last-child {
       $secondary-height: 16 * $em;
       height: $secondary-height;
@@ -108,7 +107,7 @@ article {
         padding-top: $em;
         width: 65%;
       }
-    }
+    } */
   }
 }
 
