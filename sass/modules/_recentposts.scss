@@ -1,82 +1,106 @@
 /* Recent Posts */
-
 article {
+  margin-bottom: 2em;
   overflow: hidden;
 
-  @media screen and (min-width: 600px) {
-    float: left;
-    width: 48%;
+  // article 600px ======================== 
+  @media screen and (min-width: 600px) { float: left; }
 
-    &:first-child { margin-right: 4%; }
+  // article 800px ======================== 
+  @media screen and (min-width: 800px) {}
 
-    &:last-child {
-      margin: 0;
-      width: 100%;
-
-      figure {
-        float: left;
-        width: 30%;
-      }
-      .meta {
-        float: right;
-        margin: 0;
-        width: 65%;
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    // float: left;
-    margin-left: 2%;
-    width: 32%;
-
-    &:first-child { margin-left: 0; }
-  }
-
+  // -------------------------------------
   figure {
     overflow: hidden;
     position: relative;
 
+  // figure 600px ======================== 
     @media screen and (min-width: 600px) {
       height: 14em;
       margin-bottom: .75em;
     }
-
-    img {
-      height: auto;
-      max-width: 100%;
-    }
   }
 
+  // -------------------------------------
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  // -------------------------------------
   h2 {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: .15em;
 
-    @media screen and (min-width: 768px) {
-      font-size: 2.25em;
-      margin-bottom: .25em;
-    }
+  // h2 600px ======================== 
+    @media screen and (min-width: 600px) { font-size: 2em; }
 
     a {
       color: $color-heading;
       &:hover {
         color: $accent;
-// I should probably take out the next line or change it even though it's hilarious;
         @include text-shadow(darken($accent,25));
       }
     }
   }
-
-}
-.post-recent, .post-older { margin-bottom: 1.5em; }
+} // end article
 
 .post-recent {
   height: 6em;
 
+  // .post-recent 600px ======================== 
   @media screen and (min-width: 600px) {
     height: auto;
-    margin-bottom: 3em;
+    width: 48%;
+
+    &:first-child { margin-right: 4%; }
+
+    &:last-child {
+      height: 16em;
+      width: 100%;
+
+      figure {
+        float: left;
+        height: auto;
+        width: 35%;
+      }
+      .meta {
+        border-top: 1px solid darken($body-bg, 5);
+        float: right;
+        height: 100%;
+        padding-top: 1em;
+        width: 60%;
+      }
+
+  // .post-recent:last-child 800px ======================== 
+      @media screen and (min-width: 800px) {
+        height: auto;
+        width: 32%;
+
+        figure {
+          float: none;
+          height: 14em;
+          margin-bottom: .75em;
+          width: 100%;
+        }
+
+        .meta {
+          border: 0;
+          height: 16em;
+          padding-top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // .post-recent 800px ======================== 
+  @media screen and (min-width: 800px) {
+    margin-left: 2%;
+    width: 32%;
+
+    &:first-child { margin: 0; }
   }
 
   figure {
@@ -90,41 +114,30 @@ article {
     }
   }
 
+
   .meta {
     border-top: 1px solid darken($body-bg, 5);
-    float: left;
+    float: right;
     overflow: hidden;
     padding-top: 1em;
     position: relative;
     width: 70%;
 
+    // 600px ======================== 
     @media screen and (min-width: 600px) {
       border: 0;
       height: 16em;
       padding-top: 0;
       width: 100%;
 
-      &:after {
-        @include article-fade;
-        background-size: 100%;
-        bottom: 0;
-        left: 0;
-        content: '';
-        display: block;
-        position: absolute;
-        height: 30%;
-        width: 100%;
-      }
+      &:after { @include article-fade; }
     }
   }
-
   .copy {
     font-size: .9em;
     visibility: hidden;
 
-    @media screen and (min-width: 600px) {
-      visibility: visible;
-    }
+    @media screen and (min-width: 600px) { visibility: visible; }
   }
 }
 

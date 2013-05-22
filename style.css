@@ -253,7 +253,7 @@ nav {
   height: 30em;
   width: 100%; }
   #glamour .meta {
-    bottom: 0;
+    top: 0;
     color: #fff;
     padding: 0.5em 2em;
     position: absolute;
@@ -283,21 +283,29 @@ nav {
   background-size: cover;
   -webkit-background-position: center;
   background-position: center; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 640px) {
     .hero, .sidekick {
       float: left;
       width: 50%; } }
+  .hero .meta, .sidekick .meta {
+    margin-top: .75em; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .hero {
     height: 100%; }
+    .hero .meta {
+      margin-top: 10em; }
 
   .sidekick {
-    height: 50%; } }
+    height: 50%; }
+    .sidekick .meta {
+      margin-top: 2.5em; } }
 @media screen and (min-width: 960px) {
   .hero, .sidekick {
     height: 100%;
-    width: 33.3333%; } }
+    width: 33.3333%; }
+    .hero .meta, .sidekick .meta {
+      margin-top: 10em; } }
 .img-overlay {
   background: rgba(4, 26, 37, 0.65);
   position: absolute;
@@ -331,29 +339,11 @@ nav {
 
 /* Recent Posts */
 article {
+  margin-bottom: 2em;
   overflow: hidden; }
   @media screen and (min-width: 600px) {
     article {
-      float: left;
-      width: 48%; }
-      article:first-child {
-        margin-right: 4%; }
-      article:last-child {
-        margin: 0;
-        width: 100%; }
-        article:last-child figure {
-          float: left;
-          width: 30%; }
-        article:last-child .meta {
-          float: right;
-          margin: 0;
-          width: 65%; } }
-  @media screen and (min-width: 768px) {
-    article {
-      margin-left: 2%;
-      width: 32%; }
-      article:first-child {
-        margin-left: 0; } }
+      float: left; } }
   article figure {
     overflow: hidden;
     position: relative; }
@@ -361,32 +351,63 @@ article {
       article figure {
         height: 14em;
         margin-bottom: .75em; } }
-    article figure img {
-      height: auto;
-      max-width: 100%; }
+  article img {
+    height: auto;
+    max-width: 100%; }
   article h2 {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: .15em; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 600px) {
       article h2 {
-        font-size: 2.25em;
-        margin-bottom: .25em; } }
+        font-size: 2em; } }
     article h2 a {
       color: #041a25; }
       article h2 a:hover {
         color: #d21452;
         text-shadow: 1px 1px 0 #5e0925, 2px 2px 0 #5e0925, 3px 3px 0 #5e0925, 4px 4px 0 #5e0925; }
 
-.post-recent, .post-older {
-  margin-bottom: 1.5em; }
-
 .post-recent {
   height: 6em; }
   @media screen and (min-width: 600px) {
     .post-recent {
       height: auto;
-      margin-bottom: 3em; } }
+      width: 48%; }
+      .post-recent:first-child {
+        margin-right: 4%; }
+      .post-recent:last-child {
+        height: 16em;
+        width: 100%; }
+        .post-recent:last-child figure {
+          float: left;
+          height: auto;
+          width: 35%; }
+        .post-recent:last-child .meta {
+          border-top: 1px solid #bdcfcb;
+          float: right;
+          height: 100%;
+          padding-top: 1em;
+          width: 60%; } }
+      @media screen and (min-width: 600px) and (min-width: 800px) {
+        .post-recent:last-child {
+          height: auto;
+          width: 32%; }
+          .post-recent:last-child figure {
+            float: none;
+            height: 14em;
+            margin-bottom: .75em;
+            width: 100%; }
+          .post-recent:last-child .meta {
+            border: 0;
+            height: 16em;
+            padding-top: 0;
+            width: 100%; } }
+  @media screen and (min-width: 800px) {
+    .post-recent {
+      margin-left: 2%;
+      width: 32%; }
+      .post-recent:first-child {
+        margin: 0; } }
   .post-recent figure {
     float: left;
     margin-right: 5%;
@@ -396,7 +417,7 @@ article {
         width: 100%; } }
   .post-recent .meta {
     border-top: 1px solid #bdcfcb;
-    float: left;
+    float: right;
     overflow: hidden;
     padding-top: 1em;
     position: relative;
@@ -571,9 +592,6 @@ footer {
 ================== */
 @media screen and (min-width: 768px) {
   /* Glamour section */
-  #glamour .hero .meta, #glamour .sidekick .meta {
-    bottom: 12%; }
-
   /* Recent Posts */
   article.post-recent {
     /* 

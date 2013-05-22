@@ -6,7 +6,7 @@
   width: 100%;
 
   .meta {
-    bottom: 0;
+    top: 0;
     color: #fff;
     padding: .5em 2em;
     position: absolute;
@@ -44,21 +44,31 @@
   -webkit-background-position: center;
           background-position: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 640px) {
     float: left;
     width: 50%;
   }
+  .meta { margin-top: .75em; }
 }
 
-@media screen and (min-width: 768px) {
-  .hero { height: 100%; } 
-  .sidekick { height: 50%; }
+@media screen and (min-width: 640px) {
+  .hero {
+    height: 100%;
+
+    .meta { margin-top: 10em; }
+  } 
+  .sidekick {
+    height: 50%;
+    .meta { margin-top: 2.5em; }
+  }
 }
 
 @media screen and (min-width: 960px) {
   .hero, .sidekick {
     height: 100%;
     width: 33.3333%;
+
+    .meta { margin-top: 10em; }
   }
 }
 
