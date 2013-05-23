@@ -172,6 +172,23 @@ table {
   background: #ccdad7;
   padding: 2em; }
 
+@media screen and (min-width: 600px) {
+  .col-3 {
+    float: left;
+    width: 48%; }
+    .col-3:first-child {
+      margin-right: 4%; }
+    .col-3:last-child {
+      width: 100%; } }
+@media screen and (min-width: 800px) {
+  .col-3 {
+    margin-left: 2%;
+    width: 32%; }
+    .col-3:first-child {
+      margin: 0; }
+    .col-3:last-child {
+      width: 32%; } }
+
 h1 {
   font-size: 2.7em; }
 
@@ -318,25 +335,6 @@ nav {
   .img-overlay:hover {
     background: rgba(4, 26, 37, 0.5); }
 
-/* Content section
-================== */
-/* Post snippets - General Styles */
-.byline {
-  font-size: .8em;
-  font-style: italic; }
-
-.category {
-  background: #d21452;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.65625em;
-  font-style: italic;
-  padding: 0.4375em 0.875em;
-  position: absolute;
-  text-transform: uppercase;
-  top: 0;
-  left: 0; }
-
 /* Recent Posts
 ============================ */
 article {
@@ -360,14 +358,11 @@ article {
 
 /* article 600px ======================== */
 @media screen and (min-width: 600px) {
-  article {
-    float: left; }
-    article figure {
-      height: 14em;
-      margin-bottom: .75em; }
-    article h2 {
-      font-size: 2em; } }
-/* article 800px ======================== */
+  article figure {
+    height: 14em;
+    margin-bottom: .75em; }
+  article h2 {
+    font-size: 2em; } }
 /* Post Snippet Blocks
 ======================================== */
 .post-block {
@@ -391,13 +386,9 @@ article {
 /* .post-block 600px ======================== */
 @media screen and (min-width: 600px) {
   .post-block {
-    height: auto;
-    width: 48%; }
-    .post-block:first-child {
-      margin-right: 4%; }
+    height: auto; }
     .post-block:last-child {
-      height: 16em;
-      width: 100%; }
+      height: 16em; }
       .post-block:last-child figure, .post-block:last-child .meta {
         height: 100%; }
       .post-block:last-child figure {
@@ -433,14 +424,9 @@ article {
 /* .post-block 800px ======================== */
 @media screen and (min-width: 800px) {
   .post-block {
-    height: auto;
-    margin-left: 2%;
-    width: 32%; }
-    .post-block:first-child {
-      margin: 0; }
+    height: auto; }
     .post-block:last-child {
-      height: auto;
-      width: 32%; }
+      height: auto; }
       .post-block:last-child figure {
         float: none;
         height: 14em;
@@ -451,6 +437,22 @@ article {
         height: 16em;
         padding-top: 0;
         width: 100%; } }
+.byline {
+  font-size: .8em;
+  font-style: italic; }
+
+.category {
+  background: #d21452;
+  color: #fff;
+  display: inline-block;
+  font-size: .75em;
+  font-style: italic;
+  padding: 0.5em 1em;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 0; }
+
 /* Review cards
 =============== */
 .slider {
@@ -587,34 +589,6 @@ footer {
 
 /* =Media queries
 -------------------------------------------------------------- */
-/* Tablet
-================== */
-@media screen and (min-width: 768px) {
-  /* Glamour section */
-  /* Recent Posts */
-  article.post-recent {
-    /* 
-        &:last-child {
-          $secondary-height: 16 * $em;
-          height: $secondary-height;
-          // margin-bottom: 0;
-          width: 100% - 2 * $gutter;
-    
-          figure {
-            float: left;
-            height: auto;
-            margin-bottom: 0;
-            width: 30%;
-          }
-    
-          .meta {
-            border-top: 1px solid darken($body-bg, 5);
-            float: right;
-            height: $secondary-height;
-            padding-top: $em;
-            width: 65%;
-          }
-        } */ } }
 /* Desktop
 ================== */
 @media screen and (min-width: 960px) {
@@ -656,12 +630,6 @@ footer {
       float: none;
       height: 12.25em;
       width: 100%; } }
-/* Images */
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
 /* img replacement */
 .ir {
   background-color: transparent;

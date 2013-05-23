@@ -35,7 +35,6 @@ Text Domain: vegasburgerblog
 @import "modules/nav";
 @import "modules/glamour";
 
-@import "content";
 @import "modules/recentposts";
 @import "modules/review-cards";
 
@@ -88,8 +87,6 @@ embed, iframe, object, video { max-width: 100%; }
 
 @import "base";
 
-
-
 /* Page structure */
 
 /* Banner */
@@ -99,15 +96,7 @@ embed, iframe, object, video { max-width: 100%; }
 /* =Media queries
 -------------------------------------------------------------- */
 
-@import "mqtablet";
 @import "mqdesktop";
 
-
-/* Images */
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 @import "utility";
 @import "print";
