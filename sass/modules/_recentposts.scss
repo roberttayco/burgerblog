@@ -18,7 +18,7 @@ article {
     margin-bottom: .15em;
 
     a {
-      color: $color-heading;
+      color: $color-headings;
       &:hover {
         color: $accent;
         @include text-shadow(darken($accent,25));

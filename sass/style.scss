@@ -70,8 +70,7 @@ input[type="color"] {
   padding: 0;
 }
 
-/* Buttons */
-
+@import "modules/buttons";
 @import "figures";
 
 /* Make sure videos and embeds fit their containers */
