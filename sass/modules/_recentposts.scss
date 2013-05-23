@@ -1,42 +1,21 @@
-/* Recent Posts */
-// ======================== */
+/* Recent Posts
+============================ */
 article {
   margin-bottom: 2em;
   overflow: hidden;
 
-  // article 600px ======================== 
-  @media screen and (min-width: 600px) { float: left; }
-
-  // article 800px ======================== 
-  @media screen and (min-width: 800px) {}
-
-  // -------------------------------------
   figure {
-    height: 100%;
     overflow: hidden;
     position: relative;
-
-  // figure 600px ======================== 
-    @media screen and (min-width: 600px) {
-      height: 14em;
-      margin-bottom: .75em;
-    }
   }
-
-  // -------------------------------------
   img {
     height: auto;
     max-width: 100%;
   }
-
-  // -------------------------------------
   h2 {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: .15em;
-
-  // h2 600px ======================== 
-    @media screen and (min-width: 600px) { font-size: 2em; }
 
     a {
       color: $color-heading;
@@ -46,20 +25,37 @@ article {
       }
     }
   }
-} // end article
+}
 
-/* Recent post snippets
-// ======================================== */
-.post-recent, .post-older {
+/* article 600px ======================== */
+@media screen and (min-width: 600px) {
+  article {
+    float: left;
+
+    figure {
+      height: 14em;
+      margin-bottom: .75em;
+    }
+    h2 { font-size: 2em; }
+  }
+}
+
+/* article 800px ======================== */
+@media screen and (min-width: 800px) {}
+
+// end article
+
+
+/* Post Snippet Blocks
+======================================== */
+.post-block {
   height: 6em;
 
   figure {
     float: left;
+    height: 100%;
     margin-right: 5%;
     width: 25%;
-
-    // .post-recent/older figure 600px ======================== 
-    @media screen and (min-width: 600px) { width: 100%; }
   }
   .meta {
     border-top: 1px solid darken($body-bg, 5);
@@ -68,48 +64,61 @@ article {
     padding-top: 1em;
     position: relative;
     width: 70%;
-
-    // .meta 600px ======================== 
-    @media screen and (min-width: 600px) {
-      border: 0;
-      padding-top: 0;
-      width: 100%;
-
-      &:after { @include article-fade; }
-    }
   }
+  .copy {
+    font-size: .9em;
+    visibility: hidden;
+  }
+}
 
-// .post-recent/older 600px ======================== 
-  @media screen and (min-width: 600px) {
+/* .post-block 600px ======================== */
+@media screen and (min-width: 600px) {
+  .post-block {
     height: auto;
     width: 48%;
 
     &:first-child { margin-right: 4%; }
     &:last-child {
+      height: 16em;
       width: 100%;
+
+      figure, .meta { height: 100%; }
 
       figure {
         float: left;
-        height: 100%;
         width: 35%;
       }
       .meta {
         border-top: 1px solid darken($body-bg, 5);
         float: right;
-        height: 100%;
         padding-top: 1em;
         width: 60%;
       }
     }
-  }
 
-// .post-recent/older 800px ======================== 
-  @media screen and (min-width: 800px) {
+    figure, .meta { width: 100%; }
+
+    figure { height: 14em; }
+    .meta {
+      border: 0;
+      height: 16em;
+      padding-top: 0;
+      &:after { @include article-fade; }
+    }
+    .copy { visibility: visible; }
+  }
+}
+
+/* .post-block 800px ======================== */
+@media screen and (min-width: 800px) {
+  .post-block {
+    height: auto;
     margin-left: 2%;
     width: 32%;
 
     &:first-child { margin: 0; }
     &:last-child {
+      height: auto;
       width: 32%;
 
       figure {
@@ -120,7 +129,7 @@ article {
       }
       .meta {
         border: 0;
-        // height: 16em;
+        height: 16em;
         padding-top: 0;
         width: 100%;
       }
@@ -128,94 +137,94 @@ article {
   }
 }
 
-.post-recent {
+// .post-recent {
   // .post-recent 600px ======================== 
-  @media screen and (min-width: 600px) {
+  // @media screen and (min-width: 600px) {
     // height: auto;
 
-    &:last-child {
-      height: 16em;
+    // &:last-child {
+    //   height: 16em;
 
-      figure {}
-      .meta {}
+    //   figure {}
+    //   .meta {}
 
   // .post-recent:last-child 800px ======================== 
-      @media screen and (min-width: 800px) {
-        height: auto;
+      // @media screen and (min-width: 800px) {
+      //   height: auto;
         // width: 32%;
 
-        figure {
-          // float: none;
-          // height: 14em;
-          // margin-bottom: .75em;
-          // width: 100%;
-        }
+  //       figure {
+  //         // float: none;
+  //         // height: 14em;
+  //         // margin-bottom: .75em;
+  //         // width: 100%;
+  //       }
 
-        .meta {
-          // border: 0;
-          height: 16em;
-          // padding-top: 0;
-          // width: 100%;
-        }
-      }
-    }
-  }
-
-  // .post-recent 800px ======================== 
-  @media screen and (min-width: 800px) {
-    // margin-left: 2%;
-    // width: 32%;
-
-    // &:first-child { margin: 0; }
-  }
-
-  // figure {
-  //   float: left;
-  //   margin-right: 5%;
-  //   width: 25%;
-
-  //   @media screen and (min-width: 600px) {
-  //     // float: none;
-  //     width: 100%;
+  //       .meta {
+  //         // border: 0;
+  //         height: 16em;
+  //         // padding-top: 0;
+  //         // width: 100%;
+  //       }
+  //     }
   //   }
   // }
 
-  .meta {
-    // border-top: 1px solid darken($body-bg, 5);
-    // float: right;
-    // overflow: hidden;
-    // padding-top: 1em;
-    // position: relative;
-    // width: 70%;
+  // // .post-recent 800px ======================== 
+  // @media screen and (min-width: 800px) {
+  //   // margin-left: 2%;
+  //   // width: 32%;
 
-    // 600px ======================== 
-    @media screen and (min-width: 600px) {
-      // border: 0;
-      height: 16em;
-      // padding-top: 0;
-      // width: 100%;
+  //   // &:first-child { margin: 0; }
+  // }
 
-      // &:after { @include article-fade; }
-    }
-  }
-  .copy {
-    font-size: .9em;
-    visibility: hidden;
+  // // figure {
+  // //   float: left;
+  // //   margin-right: 5%;
+  //   width: 25%;
 
-    @media screen and (min-width: 600px) { visibility: visible; }
-  }
-}
+  // //   @media screen and (min-width: 600px) {
+  // //     // float: none;
+  // //     width: 100%;
+  // //   }
+  // // }
 
-// .post-older {
-//   border-top: 1px solid darken($body-bg, 5);
-//   font-size: .875em;
-//   padding-top: 1em;
-//   // text-align: center;
+  // .meta {
+  //   // border-top: 1px solid darken($body-bg, 5);
+  //   // float: right;
+  //   // overflow: hidden;
+  //   // padding-top: 1em;
+  //   // position: relative;
+  //   // width: 70%;
 
-//   &:first-child { border: 0; }
-//   &:last-child { margin-bottom: 0; }
+  //   // 600px ======================== 
+//   //   @media screen and (min-width: 600px) {
+//   //     // border: 0;
+//   //     height: 16em;
+//   //     // padding-top: 0;
+//   //     // width: 100%;
+
+//       // &:after { @include article-fade; }
+//     }
+//   }
+// }
+
+// // .post-older {
+// //    border-top: 1px solid darken($body-bg, 5);
+// //    font-size: .875em;
+// //    padding-top: 1em;
+// //    text-align: center;
+
+//    &:first-child { border: 0; }
+//    &:last-child { margin-bottom: 0; }
 
 //   @media screen and (min-width: 600px) {
+//     figure { height: 8em; }
 
+//     &:last-child {
+//       figure {
+//         height: 8em;
+//       }
+//     }
 //   }
 // }

@@ -337,21 +337,14 @@ nav {
   top: 0;
   left: 0; }
 
-/* Recent Posts */
+/* Recent Posts
+============================ */
 article {
   margin-bottom: 2em;
   overflow: hidden; }
-  @media screen and (min-width: 600px) {
-    article {
-      float: left; } }
   article figure {
-    height: 100%;
     overflow: hidden;
     position: relative; }
-    @media screen and (min-width: 600px) {
-      article figure {
-        height: 14em;
-        margin-bottom: .75em; } }
   article img {
     height: auto;
     max-width: 100%; }
@@ -359,102 +352,105 @@ article {
     font-size: 1.5em;
     line-height: 1;
     margin-bottom: .15em; }
-    @media screen and (min-width: 600px) {
-      article h2 {
-        font-size: 2em; } }
     article h2 a {
       color: #041a25; }
       article h2 a:hover {
         color: #d21452;
         text-shadow: 1px 1px 0 #5e0925, 2px 2px 0 #5e0925, 3px 3px 0 #5e0925, 4px 4px 0 #5e0925; }
 
-.post-recent, .post-older {
+/* article 600px ======================== */
+@media screen and (min-width: 600px) {
+  article {
+    float: left; }
+    article figure {
+      height: 14em;
+      margin-bottom: .75em; }
+    article h2 {
+      font-size: 2em; } }
+/* article 800px ======================== */
+/* Post Snippet Blocks
+======================================== */
+.post-block {
   height: 6em; }
-  .post-recent figure, .post-older figure {
+  .post-block figure {
     float: left;
+    height: 100%;
     margin-right: 5%;
     width: 25%; }
-    @media screen and (min-width: 600px) {
-      .post-recent figure, .post-older figure {
-        width: 100%; } }
-  .post-recent .meta, .post-older .meta {
+  .post-block .meta {
     border-top: 1px solid #bdcfcb;
     float: right;
     overflow: hidden;
     padding-top: 1em;
     position: relative;
     width: 70%; }
-    @media screen and (min-width: 600px) {
-      .post-recent .meta, .post-older .meta {
-        border: 0;
-        padding-top: 0;
-        width: 100%; }
-        .post-recent .meta:after, .post-older .meta:after {
-          background-image: -moz-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
-          background-image: -webkit-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
-          background-image: linear-gradient(top, rgba(204, 218, 215, 0) 0%, #ccdad7 100%);
-          background-size: 100%;
-          bottom: 0;
-          left: 0;
-          content: '';
-          display: block;
-          position: absolute;
-          height: 30%;
-          width: 100%; } }
-  @media screen and (min-width: 600px) {
-    .post-recent, .post-older {
-      height: auto;
-      width: 48%; }
-      .post-recent:first-child, .post-older:first-child {
-        margin-right: 4%; }
-      .post-recent:last-child, .post-older:last-child {
-        width: 100%; }
-        .post-recent:last-child figure, .post-older:last-child figure {
-          float: left;
-          height: 100%;
-          width: 35%; }
-        .post-recent:last-child .meta, .post-older:last-child .meta {
-          border-top: 1px solid #bdcfcb;
-          float: right;
-          height: 100%;
-          padding-top: 1em;
-          width: 60%; } }
-  @media screen and (min-width: 800px) {
-    .post-recent, .post-older {
-      margin-left: 2%;
-      width: 32%; }
-      .post-recent:first-child, .post-older:first-child {
-        margin: 0; }
-      .post-recent:last-child, .post-older:last-child {
-        width: 32%; }
-        .post-recent:last-child figure, .post-older:last-child figure {
-          float: none;
-          height: 14em;
-          margin-bottom: .75em;
-          width: 100%; }
-        .post-recent:last-child .meta, .post-older:last-child .meta {
-          border: 0;
-          padding-top: 0;
-          width: 100%; } }
+  .post-block .copy {
+    font-size: .9em;
+    visibility: hidden; }
 
+/* .post-block 600px ======================== */
 @media screen and (min-width: 600px) {
-  .post-recent:last-child {
-    height: 16em; } }
-  @media screen and (min-width: 600px) and (min-width: 800px) {
-    .post-recent:last-child {
-      height: auto; }
-      .post-recent:last-child .meta {
-        height: 16em; } }
-@media screen and (min-width: 600px) {
-  .post-recent .meta {
-    height: 16em; } }
-.post-recent .copy {
-  font-size: .9em;
-  visibility: hidden; }
-  @media screen and (min-width: 600px) {
-    .post-recent .copy {
+  .post-block {
+    height: auto;
+    width: 48%; }
+    .post-block:first-child {
+      margin-right: 4%; }
+    .post-block:last-child {
+      height: 16em;
+      width: 100%; }
+      .post-block:last-child figure, .post-block:last-child .meta {
+        height: 100%; }
+      .post-block:last-child figure {
+        float: left;
+        width: 35%; }
+      .post-block:last-child .meta {
+        border-top: 1px solid #bdcfcb;
+        float: right;
+        padding-top: 1em;
+        width: 60%; }
+    .post-block figure, .post-block .meta {
+      width: 100%; }
+    .post-block figure {
+      height: 14em; }
+    .post-block .meta {
+      border: 0;
+      height: 16em;
+      padding-top: 0; }
+      .post-block .meta:after {
+        background-image: -moz-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
+        background-image: -webkit-linear-gradient(top, rgba(204, 218, 215, 0) 0, #ccdad7 100%);
+        background-image: linear-gradient(top, rgba(204, 218, 215, 0) 0%, #ccdad7 100%);
+        background-size: 100%;
+        bottom: 0;
+        left: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        height: 30%;
+        width: 100%; }
+    .post-block .copy {
       visibility: visible; } }
-
+/* .post-block 800px ======================== */
+@media screen and (min-width: 800px) {
+  .post-block {
+    height: auto;
+    margin-left: 2%;
+    width: 32%; }
+    .post-block:first-child {
+      margin: 0; }
+    .post-block:last-child {
+      height: auto;
+      width: 32%; }
+      .post-block:last-child figure {
+        float: none;
+        height: 14em;
+        margin-bottom: .75em;
+        width: 100%; }
+      .post-block:last-child .meta {
+        border: 0;
+        height: 16em;
+        padding-top: 0;
+        width: 100%; } }
 /* Review cards
 =============== */
 .slider {
