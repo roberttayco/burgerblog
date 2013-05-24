@@ -101,7 +101,7 @@ figure {
   margin: 0; }
 
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -211,14 +211,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #041a25;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.25em; }
+  margin: 0 0 .25em; }
 
 h1, h2 {
   font-family: "bitter", baskerville, georgia, serif;
   letter-spacing: -1px; }
 
 p {
-  margin: 0 0 0.75em; }
+  margin: 0 0 .75em; }
 
 .lead-in {
   font-size: 1.5em; }
@@ -248,7 +248,7 @@ nav {
   background: #062534;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
   font-size: 0.9625em;
-  padding: 0.75em 0; }
+  padding: .75em 0; }
   .main-nav a {
     color: #accbda;
     display: block;
@@ -272,7 +272,7 @@ nav {
   #glamour .meta {
     top: 0;
     color: #fff;
-    padding: 0.5em 2em;
+    padding: .5em 2em;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -447,7 +447,7 @@ article {
   display: inline-block;
   font-size: .7em;
   font-style: italic;
-  padding: 0.4em 0.875em;
+  padding: .4em .875em;
   position: absolute;
   text-transform: uppercase;
   top: 0;
@@ -484,7 +484,7 @@ article {
 button,
 input,
 textarea {
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 3px;
   font-family: inherit;
   padding: 6px;
@@ -516,31 +516,32 @@ input[type="color"] {
   font-weight: 700; }
 
 .pagination {
-  border-top: 1px solid #bdcfcb;
-  font-size: .8em; }
+  font-size: .85em;
+  margin: 1em auto; }
   .pagination .btn {
     background: #ccdad7;
     color: #0b4b6a;
     display: block;
     float: left;
-    height: 4em;
-    line-height: 4em;
+    height: 5em;
+    line-height: 5em;
     padding: 0 3em;
     width: 50%; }
     .pagination .btn:first-child {
-      border-right: 1px solid #bdcfcb;
+      border-right: 1px solid #bdcfcb; }
+    .pagination .btn:last-child {
       text-align: right; }
     .pagination .btn:hover {
       background: #c5d5d1;
-      color: #041a25; }
+      color: #d21452; }
   @media screen and (min-width: 600px) {
     .pagination {
       font-size: 1em; }
       .pagination .btn {
-        padding: 0 4em; } }
+        padding: 0 6em; } }
   @media screen and (min-width: 800px) {
     .pagination .btn {
-      padding: 0 5em; } }
+      padding: 0 8em; } }
 
 /* Images */
 .aligncenter {
@@ -593,12 +594,8 @@ a {
   outline: none;
   color: #d21452;
   text-decoration: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-footer {
-  padding: 2em;
-  width: 100%; }
+  -webkit-transition: all .3s;
+  transition: all .3s; }
 
 /* Page structure */
 /* Banner */
@@ -607,12 +604,13 @@ footer {
 footer {
   background: #062534;
   color: #fff;
-  font-size: .85em; }
+  padding: 2em 0;
+  width: 100%; }
   footer .logo {
-    background: url(img/vbb_logo@2x.png) no-repeat;
+    background: url(img/vbb_logo_white@2x.png) no-repeat;
     background-size: contain;
     height: 100px;
-    margin: 0 2%; }
+    margin: 0 0 1em; }
 
 #tw-feed {
   color: #fff;
@@ -710,7 +708,7 @@ footer {
 
   /* Don't show links for images, or javascript/internal links */
   pre, blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid; }
 
   thead {

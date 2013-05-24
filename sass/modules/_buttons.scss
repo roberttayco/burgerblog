@@ -5,33 +5,34 @@
 }
 
 .pagination {
-   border-top: 1px solid $body-bg-dk;
-   font-size: .8em;
+   font-size: .85em;
+   margin: 1em auto;
 
    .btn {
       background: $body-bg;
       color: lighten($color-headings, 15);
       display: block;
       float: left;
-      height: 4em;
-      line-height: 4em;
+      height: 5em;
+      line-height: 5em;
       padding: 0 3em;
       width: 50%;
 
       &:first-child {
          border-right: 1px solid $body-bg-dk;
-         text-align: right;
+         // text-align: right;
       }
+      &:last-child { text-align: right; }
       &:hover {
          background: darken($body-bg, 2.5);
-         color: $color-headings;
+         color: $accent;
       }
    }
    @media screen and (min-width: 600px) {
       font-size: 1em;
-      .btn { padding: 0 4em; }
+      .btn { padding: 0 6em; }
    }
    @media screen and (min-width: 800px) {
-      .btn { padding: 0 5em; }
+      .btn { padding: 0 8em; }
    }
 }

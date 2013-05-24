@@ -30,8 +30,6 @@ article {
 /* article 600px ======================== */
 @media screen and (min-width: 600px) {
   article {
-    // float: left;
-
     figure {
       height: 14em;
       margin-bottom: .75em;
@@ -71,12 +69,9 @@ article {
 @media screen and (min-width: 600px) {
   .post-block {
     height: auto;
-    // width: 48%;
 
-    // &:first-child { margin-right: 4%; }
     &:last-child {
       height: 16em;
-      // width: 100%;
 
       figure, .meta { height: 100%; }
 
@@ -109,13 +104,9 @@ article {
 @media screen and (min-width: 800px) {
   .post-block {
     height: auto;
-    // margin-left: 2%;
-    // width: 32%;
 
-    // &:first-child { margin: 0; }
     &:last-child {
       height: auto;
-      // width: 32%;
 
       figure {
         float: none;

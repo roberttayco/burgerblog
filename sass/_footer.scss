@@ -3,12 +3,14 @@
 footer {
   background: $nav-bg;
   color: #fff;
-  font-size: .85em;
+  padding: 2em 0;
+  width: 100%;
+
   .logo {
-    background: url(img/vbb_logo@2x.png) no-repeat;
+    background: url(img/vbb_logo_white@2x.png) no-repeat;
     background-size: contain;
     height: 100px;
-    margin: 0 2%;
+    margin: 0 0 1em;
   }
 }
 
