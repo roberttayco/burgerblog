@@ -7,7 +7,6 @@ $nav-bg-dk: darken($nav-bg, 20%);
 $header-bg: #638a81; // masthead
 
 $body-bg: #ccdad7; // main content background
-// $body-bg: #d6e1df; // main content background
 $body-bg-dk: darken($body-bg, 5); // bg outside main container
 
 $accent: #d21452; // pink
@@ -21,7 +20,7 @@ $color-headings: #041a25;
 $color-copy: #020f16;
 
 $font-base: 14;
-$em: ($font-base / 16) * 1em; // not entirely sure what the fuck I'm doing right here
+$em: ($font-base / 16) * 1em; // set a base font size and base everything relative to that
 
 $font-heavy: 900;
 $font-bold: 700;
@@ -30,16 +29,23 @@ $font-light: 200;
 
 // Other variables
 // =======================
-$gutter: 2%;
+// $gutter: 2%;
 
 
 // Mixins
 // =====================
-// @mixin box-sizing {
-//      -moz-box-sizing: border-box;
-//   -webkit-box-sizing: border-box;
-//           box-sizing: border-box;
-// }
+@mixin breakpoint($width) {
+   @if      $width == rickon  { @media screen and (min-width: 480px)  { @content; } }
+   @else if $width == bran    { @media screen and (min-width: 640px)  { @content; } }
+   @else if $width == arya    { @media screen and (min-width: 720px)  { @content; } }
+   @else if $width == sansa   { @media screen and (min-width: 800px)  { @content; } }
+   @else if $width == robb    { @media screen and (min-width: 960px)  { @content; } }
+   @else if $width == catelyn { @media screen and (min-width: 1024px) { @content; } }
+   @else if $width == ned     { @media screen and (min-width: 1280px) { @content; } }
+   @else if $width == jonsnow { @media screen and (min-width: 1440px) { @content; } }
+   @else if $width == hound   { @media screen and (min-width: 1600px) { @content; } }
+   @else if $width == tyrion  { @media screen and (min-width: 1920px) { @content; } }
+}
 
 @mixin text-shadow($color) {
   text-shadow: 1px 1px 0 $color,

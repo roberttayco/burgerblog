@@ -1,0 +1,12 @@
+.logo {
+   height: 2em;
+   margin: 0 auto;
+   max-width: 100%;
+
+   header & { background: url(img/vbb_logo@2x.png) center no-repeat; }
+   footer & { background: url(img/vbb_logo_white@2x.png) center no-repeat; }
+   header &, footer & {
+      -webkit-background-size: contain;
+              background-size: contain;
+   }
+}

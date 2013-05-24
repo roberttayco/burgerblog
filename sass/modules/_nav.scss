@@ -16,7 +16,7 @@ nav {
   // $nav-height: 4em;
   background: $nav-bg;
   box-shadow: 0 3px 16px rgba(0,0,0,.5);
-  font-size: 1.1 * $em;
+  font-size: 1.1em;
   padding: .75em 0;
 
   a {
@@ -27,7 +27,7 @@ nav {
   }
 
   ul {
-    line-height: 2.85em;
+    line-height: 2.85;
     // line-height: 2.85 * $em;
   }
 
@@ -38,5 +38,10 @@ nav {
       height: 40px;
       width: 26px;
     }
+  }
+
+  @media screen and (min-width: 800px) {
+    position: fixed; 
+    z-index: 100;
   }
 }

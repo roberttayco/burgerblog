@@ -5,12 +5,21 @@ header {
     padding: 4%;
     // height: 125px;
     // padding-top: 4em;
+  }
+  .logo {
+    text-align: center;
+    width: 400px;
+  }
+  .tagline {
+    color: $body-bg;
+    font-size: 1.25 * $em;
+    text-align: center;
+  }
+}
 
-    .logo {
-      background: url(img/vbb_logo@2x.png) no-repeat;
-      background-size: contain;
-      height: 100px;
-      margin: 0 2%;
-    }
+@include breakpoint(ned) {
+  header {
+    .search { width: 25%; }
+    .masthead { padding: 5.5em 2em 1.2em; }
   }
 }

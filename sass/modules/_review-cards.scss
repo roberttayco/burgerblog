@@ -1,31 +1,46 @@
 /* Review cards
 =============== */
-
 .slider {
+  overflow: hidden;
+}
+.slider-container {
+  background: lighten($body-bg, 5);
+  border: {
+    bottom: 1px solid darken($body-bg, 5);
+    top: 1px solid darken($body-bg, 5);
+  }
   margin-bottom: 2em;
+  overflow-x: scroll;
+  overflow: hidden;
+  padding: 1em 0;
+  width: 2594px;
 }
 .review-card {
-  -webkit-background-position: center !important;
-  background-position: center;
-  -webkit-background-size: cover !important;
-  background-size: cover;
+  -webkit-background-position: center;
+          background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
   color: #fff;
   float: left;
-  height: 16 * $em;
+  height: 20em;
+  margin-left: 1em;
   overflow: hidden;
   position: relative;
-  width: 40%;
+  max-width: 200px;
+  min-width: 180px;
+
+  &:first-child { margin-left: 40px; }
 
   .meta {
     position: absolute;
+    padding: 0 1em 1em;
     top: 15%;
-    left: 10%;
     text-align: center;
-    width: 80%;
-    // z-index: 2;
+    width: 100%;
 
     h2 {
-      font-size: 1.75 * $em;
+      font-size: 1.75em;
+      @include text-shadow(#000);
       a {
         color: #fff;
         &:hover {

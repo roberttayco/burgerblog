@@ -213,8 +213,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin: 0 0 .25em; }
 
-h1, h2 {
-  font-family: "bitter", baskerville, georgia, serif;
+h1, h2, h3, h4 {
+  font-family: "bitter", baskerville, georgia, serif; }
+
+h1, h2, h3 {
   letter-spacing: -1px; }
 
 p {
@@ -223,16 +225,81 @@ p {
 .lead-in {
   font-size: 1.5em; }
 
+/* Body, links, basics */
+body {
+  background: #bdcfcb;
+  font-size: 0.875em;
+  font-family: "open sans", "helvetica neue", sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  color: #020f16; }
+
+a {
+  outline: none;
+  color: #d21452;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+
+/* Form fields, general styles first */
+button,
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  padding: 6px;
+  padding: 0.428571429rem; }
+
+button,
+input {
+  line-height: normal; }
+
+textarea {
+  font-size: 100%;
+  overflow: auto;
+  vertical-align: top; }
+
+/* Reset non-text input types */
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="color"] {
+  border: 0;
+  border-radius: 0;
+  padding: 0; }
+
+.logo {
+  height: 2em;
+  margin: 0 auto;
+  max-width: 100%; }
+  header .logo {
+    background: url(img/vbb_logo@2x.png) center no-repeat; }
+  footer .logo {
+    background: url(img/vbb_logo_white@2x.png) center no-repeat; }
+  header .logo, footer .logo {
+    -webkit-background-size: contain;
+    background-size: contain; }
+
 /* Masthead */
 header .masthead {
   background: #638a81;
   padding: 4%; }
-  header .masthead .logo {
-    background: url(img/vbb_logo@2x.png) no-repeat;
-    background-size: contain;
-    height: 100px;
-    margin: 0 2%; }
+header .logo {
+  text-align: center;
+  width: 400px; }
+header .tagline {
+  color: #ccdad7;
+  font-size: 1.09375em;
+  text-align: center; }
 
+@media screen and (min-width: 1280px) {
+  header .search {
+    width: 25%; }
+  header .masthead {
+    padding: 5.5em 2em 1.2em; } }
 /* Navigation */
 nav {
   width: 100%; }
@@ -247,7 +314,7 @@ nav {
 .main-nav {
   background: #062534;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
-  font-size: 0.9625em;
+  font-size: 1.1em;
   padding: .75em 0; }
   .main-nav a {
     color: #accbda;
@@ -256,12 +323,16 @@ nav {
     .main-nav a:hover {
       color: #d21452; }
   .main-nav ul {
-    line-height: 2.85em; }
+    line-height: 2.85; }
   .main-nav li.home-link {
     background: url(img/burger@2x.png) no-repeat;
     background-size: 100%;
     height: 40px;
     width: 26px; }
+  @media screen and (min-width: 800px) {
+    .main-nav {
+      position: fixed;
+      z-index: 100; } }
 
 /* Latest article "Glamour" section
 ========================= */
@@ -456,59 +527,44 @@ article {
 /* Review cards
 =============== */
 .slider {
-  margin-bottom: 2em; }
+  overflow: hidden; }
+
+.slider-container {
+  background: #dbe5e3;
+  border-bottom: 1px solid #bdcfcb;
+  border-top: 1px solid #bdcfcb;
+  margin-bottom: 2em;
+  overflow-x: scroll;
+  overflow: hidden;
+  padding: 1em 0;
+  width: 2594px; }
 
 .review-card {
-  -webkit-background-position: center !important;
+  -webkit-background-position: center;
   background-position: center;
-  -webkit-background-size: cover !important;
+  -webkit-background-size: cover;
   background-size: cover;
   color: #fff;
   float: left;
-  height: 14em;
+  height: 20em;
+  margin-left: 1em;
   overflow: hidden;
   position: relative;
-  width: 40%; }
+  max-width: 200px;
+  min-width: 180px; }
+  .review-card:first-child {
+    margin-left: 40px; }
   .review-card .meta {
     position: absolute;
+    padding: 0 1em 1em;
     top: 15%;
-    left: 10%;
     text-align: center;
-    width: 80%; }
+    width: 100%; }
     .review-card .meta h2 {
-      font-size: 1.53125em; }
+      font-size: 1.75em;
+      text-shadow: 1px 1px 0 black, 2px 2px 0 black, 3px 3px 0 black, 4px 4px 0 black; }
       .review-card .meta h2 a {
         color: #fff; }
-
-/* Form fields, general styles first */
-button,
-input,
-textarea {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  font-family: inherit;
-  padding: 6px;
-  padding: 0.428571429rem; }
-
-button,
-input {
-  line-height: normal; }
-
-textarea {
-  font-size: 100%;
-  overflow: auto;
-  vertical-align: top; }
-
-/* Reset non-text input types */
-input[type="checkbox"],
-input[type="radio"],
-input[type="file"],
-input[type="hidden"],
-input[type="image"],
-input[type="color"] {
-  border: 0;
-  border-radius: 0;
-  padding: 0; }
 
 .btn {
   display: inline-block;
@@ -578,27 +634,6 @@ embed, iframe, object, video {
   max-width: 100% !important;
   /* Override the Twitter embed fixed width */ }
 
-/* Author profiles */
-/* =Basic structure
--------------------------------------------------------------- */
-/* Body, links, basics */
-body {
-  background: #bdcfcb;
-  font-size: 0.875em;
-  font-family: "open sans", "helvetica neue", sans-serif;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
-  color: #020f16; }
-
-a {
-  outline: none;
-  color: #d21452;
-  text-decoration: none;
-  -webkit-transition: all .3s;
-  transition: all .3s; }
-
-/* Page structure */
-/* Banner */
 /* Footer
 ================== */
 footer {
@@ -606,59 +641,12 @@ footer {
   color: #fff;
   padding: 2em 0;
   width: 100%; }
-  footer .logo {
-    background: url(img/vbb_logo_white@2x.png) no-repeat;
-    background-size: contain;
-    height: 100px;
-    margin: 0 0 1em; }
 
 #tw-feed {
   color: #fff;
-  font-size: .5em; }
+  font-size: .5em;
+  width: 90%; }
 
-/* =Media queries
--------------------------------------------------------------- */
-/* Desktop
-================== */
-@media screen and (min-width: 960px) {
-  /* Grid
-  ---------------------- */
-  /* Header
-  ------------------ */
-  header .search {
-    width: 25%; }
-  header .masthead {
-    padding: 5.5em 2% 1.2em; }
-
-  /* Nav
-  ------------ */
-  nav.main-nav {
-    position: fixed;
-    z-index: 100; }
-
-  /* Glamour Section
-  ------------------ */
-  /* Main Content Area
-  ---------------------------- */
-  .content {
-    border-left: 1px solid #aec5c0;
-    border-right: 1px solid #aec5c0; }
-
-  article.recent.col-4 {
-    width: 29.33333%; }
-  article.recent .meta {
-    height: 15.75em; }
-  article.recent:last-child {
-    height: auto; }
-    article.recent:last-child .meta {
-      border: 0;
-      float: none;
-      height: 15.75em;
-      width: 100%; }
-    article.recent:last-child figure {
-      float: none;
-      height: 12.25em;
-      width: 100%; } }
 /* img replacement */
 .ir {
   background-color: transparent;
