@@ -5,10 +5,7 @@
 }
 .slider-container {
   background: lighten($body-bg, 5);
-  border: {
-    bottom: 1px solid darken($body-bg, 5);
-    top: 1px solid darken($body-bg, 5);
-  }
+  border-top: 1px solid darken($body-bg, 5);
   margin-bottom: 2em;
   overflow-x: scroll;
   padding: 1em 0;
@@ -21,12 +18,11 @@
           background-size: cover;
   color: #fff;
   display: inline-block;
-  height: 20em;
+  height: 360px;
   margin-left: 1em;
   overflow: hidden;
   position: relative;
-  max-width: 200px;
-  min-width: 180px;
+  width: 240px;
 
   &:first-child { margin-left: 40px; }
 

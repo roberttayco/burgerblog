@@ -531,7 +531,6 @@ article {
 
 .slider-container {
   background: #dbe5e3;
-  border-bottom: 1px solid #bdcfcb;
   border-top: 1px solid #bdcfcb;
   margin-bottom: 2em;
   overflow-x: scroll;
@@ -545,12 +544,11 @@ article {
   background-size: cover;
   color: #fff;
   display: inline-block;
-  height: 20em;
+  height: 360px;
   margin-left: 1em;
   overflow: hidden;
   position: relative;
-  max-width: 200px;
-  min-width: 180px; }
+  width: 240px; }
   .review-card:first-child {
     margin-left: 40px; }
   .review-card .meta {
