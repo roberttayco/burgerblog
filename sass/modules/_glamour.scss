@@ -2,7 +2,7 @@
 ========================= */
 #glamour {
   background: #000;
-  height: 30em;
+  height: em(480);
   width: 100%;
 
   .meta {
@@ -16,6 +16,7 @@
             transition: all 300ms;
 
     h2 {
+      font-size: em(30);
       @include text-shadow(#000);
 
       a {
@@ -24,13 +25,11 @@
         &:hover { @include text-shadow($accent); }
       }
 
-      @media screen and (min-width: 960px) { font-size: 3em; }
+      @include breakpoint(palm-md) { font-size: em(34); }
+      @include breakpoint(lap-md) { font-size: em(38); }
     }
   }
-
-  @media screen and (min-width: 960px) {
-    height: 32em;
-  }
+  @include breakpoint(lap-md) { height: em(420); }
 }
 
 .hero, .sidekick {
@@ -44,14 +43,14 @@
   -webkit-background-position: center;
           background-position: center;
 
-  @media screen and (min-width: 640px) {
+  @include breakpoint(palm-md) {
     float: left;
     width: 50%;
   }
-  .meta { margin-top: 1em; }
+  .meta { margin-top: 1.5em; }
 }
 
-@media screen and (min-width: 640px) {
+@include breakpoint(palm-md) {
   .hero {
     height: 100%;
 
@@ -63,7 +62,7 @@
   }
 }
 
-@media screen and (min-width: 960px) {
+@include breakpoint(lap-md) {
   .hero, .sidekick {
     height: 100%;
     width: 33.3333%;

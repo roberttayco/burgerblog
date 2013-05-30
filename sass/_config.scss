@@ -19,8 +19,10 @@ $font-headings: 'bitter', baskerville, georgia, serif;
 $color-headings: #041a25;
 $color-copy: #020f16;
 
-$font-base: 14;
-$em: ($font-base / 16) * 1em; // set a base font size and base everything relative to that
+// base font size at 16px, function returns desired pixel dimension in ems
+@function em($target-px-size, $base-size: 16) {
+  @return ($target-px-size / $base-size) * 1em;
+}
 
 $font-heavy: 900;
 $font-bold: 700;
@@ -29,22 +31,21 @@ $font-light: 200;
 
 // Other variables
 // =======================
-// $gutter: 2%;
 
 
 // Mixins
 // =====================
 @mixin breakpoint($width) {
-   @if      $width == rickon  { @media screen and (min-width: 480px)  { @content; } }
-   @else if $width == bran    { @media screen and (min-width: 640px)  { @content; } }
-   @else if $width == arya    { @media screen and (min-width: 720px)  { @content; } }
-   @else if $width == sansa   { @media screen and (min-width: 800px)  { @content; } }
-   @else if $width == robb    { @media screen and (min-width: 960px)  { @content; } }
-   @else if $width == catelyn { @media screen and (min-width: 1024px) { @content; } }
-   @else if $width == ned     { @media screen and (min-width: 1280px) { @content; } }
-   @else if $width == jonsnow { @media screen and (min-width: 1440px) { @content; } }
-   @else if $width == hound   { @media screen and (min-width: 1600px) { @content; } }
-   @else if $width == tyrion  { @media screen and (min-width: 1920px) { @content; } }
+   @if      $width == palm-sm  { @media screen and (min-width: em(480))  { @content; } }
+   @else if $width == palm-md  { @media screen and (min-width: em(640))  { @content; } }
+   @else if $width == palm-lg  { @media screen and (min-width: em(720))  { @content; } }
+   @else if $width == lap-sm   { @media screen and (min-width: em(800))  { @content; } }
+   @else if $width == lap-md   { @media screen and (min-width: em(960))  { @content; } }
+   @else if $width == lap-lg   { @media screen and (min-width: em(1024)) { @content; } }
+   @else if $width == desk-sm  { @media screen and (min-width: em(1280)) { @content; } }
+   @else if $width == desk-md  { @media screen and (min-width: em(1440)) { @content; } }
+   @else if $width == desk-lg  { @media screen and (min-width: em(1600)) { @content; } }
+   @else if $width == livingrm { @media screen and (min-width: em(1920)) { @content; } }
 }
 
 @mixin text-shadow($color) {

@@ -1,7 +1,7 @@
 /* Recent Posts
 ============================ */
 article {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   overflow: hidden;
 
   figure {
@@ -13,7 +13,7 @@ article {
     max-width: 100%;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: em(20);
     line-height: 1;
     margin-bottom: .15em;
 
@@ -27,8 +27,8 @@ article {
   }
 }
 
-/* article 600px ======================== */
-@media screen and (min-width: 600px) {
+/* article 640px ======================== */
+@include breakpoint(palm-md) {
   article {
     figure {
       height: 14em;
@@ -43,7 +43,7 @@ article {
 /* Post Snippet Blocks
 ======================================== */
 .post-block {
-  height: 6em;
+  height: em(90);
 
   figure {
     float: left;
@@ -55,23 +55,20 @@ article {
     border-top: 1px solid darken($body-bg, 5);
     float: right;
     overflow: hidden;
-    padding-top: 1em;
+    padding-top: .5em;
     position: relative;
     width: 70%;
   }
-  .copy {
-    font-size: .9em;
-    visibility: hidden;
-  }
+  .copy { visibility: hidden; }
 }
 
-/* .post-block 600px ======================== */
-@media screen and (min-width: 600px) {
+/* .post-block 640px ======================== */
+@include breakpoint(palm-md) {
   .post-block {
     height: auto;
 
     &:last-child {
-      height: 16em;
+      height: em(240);
 
       figure, .meta { height: 100%; }
 
@@ -89,10 +86,10 @@ article {
 
     figure, .meta { width: 100%; }
 
-    figure { height: 14em; }
+    figure { height: em(200); }
     .meta {
       border: 0;
-      height: 16em;
+      height: em(240);
       padding-top: 0;
       &:after { @include article-fade; }
     }
@@ -101,7 +98,7 @@ article {
 }
 
 /* .post-block 800px ======================== */
-@media screen and (min-width: 800px) {
+@include breakpoint(lap-sm) {
   .post-block {
     height: auto;
 
@@ -110,13 +107,13 @@ article {
 
       figure {
         float: none;
-        height: 14em;
+        height: em(200);
         margin-bottom: .75em;
         width: 100%;
       }
       .meta {
         border: 0;
-        height: 16em;
+        height: em(200);
         padding-top: 0;
         width: 100%;
       }
@@ -124,14 +121,14 @@ article {
   }
 }
 .byline {
-  font-size: .8em;
+  font-size: em(11);
   font-style: italic;
 }
 .category {
   background: $accent;
   color: #fff;
   display: inline-block;
-  font-size: .7em;
+  font-size: em(9);
   font-style: italic;
   padding: .4em .875em;
   position: absolute;

@@ -1,0 +1,33 @@
+/* Form fields
+============================ */
+button,
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #666;
+  font-family: inherit;
+  font-size: em(14);
+  padding: em(6);
+}
+button,
+input {
+    line-height: normal;
+}
+textarea {
+  font-size: 100%;
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* Reset non-text input types */
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="hidden"],
+input[type="image"],
+input[type="color"] {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}

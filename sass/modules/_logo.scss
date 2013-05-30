@@ -1,6 +1,7 @@
 .logo {
-   height: 2em;
-   margin: 0 auto;
+   // height: 2em;
+   // margin: 0 auto;
+   display: inline-block;
    max-width: 100%;
 
    header & { background: url(img/vbb_logo@2x.png) center no-repeat; }

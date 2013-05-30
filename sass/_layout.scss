@@ -4,28 +4,31 @@
 
 .container {
    margin: 0 auto;
-   max-width: 90em;
+   max-width: em(1140);
 }
 
 .main-content {
    background: $body-bg;
-   padding: 2em;
+   padding: 1em 0;
 }
 
 .col-3 {
-  @media screen and (min-width: 600px) {
+  padding: 0 1em;
+  
+  @include breakpoint(palm-md) {
     float: left;
-    width: 48%;
+    width: 50%;
+    // width: 48%;
 
-    &:first-child { margin-right: 4%; }
+    // &:first-child { margin-right: 4%; }
     &:last-child { width: 100%; } 
   }
-  @media screen and (min-width: 800px) {
-    margin-left: 2%;
-    width: 32%;
+  @include breakpoint(lap-sm) {
+    // margin-left: 2%;
+    width: 33.3333%;
 
-    &:first-child { margin: 0; }
-    &:last-child { width: 32%; }
+    // &:first-child { margin: 0; }
+    &:last-child { width: 33.3333%; }
   }
 }
 
