@@ -4,12 +4,12 @@ nav {
   width: 100%;
 
   li{
-    display: block;
-    float: left;
+  //   display: block;
+  //   float: left;
     list-style: none;
-    // margin-left: 3em;
+  //   // margin-left: 3em;
 
-    &:first-child { margin-left: 0; }
+  //   &:first-child { margin-left: 0; }
   }
 }
 
@@ -17,10 +17,22 @@ nav {
   background: $nav-bg;
   box-shadow: 0 3px 16px rgba(0,0,0,.5);
   padding: .75em 2em;
+  // position: relative;
 
   ul {
+   // responsive nav
+    display: none;
+    height: auto;
+   // ==============
     line-height: 2.85;
+    margin-bottom: 1em;
     padding: 0;
+    position: relative;
+
+    @include breakpoint(lap-sm) {
+      display: block;
+      margin-bottom: 0;
+    }
   }
 
   li {
@@ -28,12 +40,11 @@ nav {
     text-align: center;
     width: 100%;
 
-    &.menu-pull {
-      background: url(img/burger@2x.png) center no-repeat;
-      background-size: 100%;
-      height: 40px;
-      margin: 0 auto;
-      width: 26px;
+    @include breakpoint(palm-md) {
+      float: left;
+      margin-left: 2em;
+      text-align: left;
+      width: auto;
     }
   }
   a {
@@ -43,7 +54,40 @@ nav {
     font-size: em(14);
     height: 100%;
     padding: .5em;
+
     &:hover { color: $accent; }
+
+    @include breakpoint(palm-md) {
+      border: 0;
+    }
+  }
+  .menu-pull {
+    background: url(img/burger@2x.png) center no-repeat;
+    background-size: 100%;
+    border: 0;
+    height: 40px;
+    margin: 0 auto;
+    width: 26px;
+
+    @include breakpoint(lap-sm) {
+      display: none;
+    }
+  }
+
+  .search {
+
+    input {
+      width: 100%;
+    }
+    @include breakpoint(lap-sm) {
+      position: absolute;
+      right: 0;
+      
+      input {
+        width: em(200);
+      }
+    }
+
   }
 
   @include breakpoint(lap-sm) {
