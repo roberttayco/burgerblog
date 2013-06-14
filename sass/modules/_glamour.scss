@@ -37,23 +37,22 @@
   position: relative;
   height: 33.3333%;
   width: 100%;
-
   -webkit-background-size: cover;
           background-size: cover;
   -webkit-background-position: center;
           background-position: center;
 
+  .meta { margin-top: 1.5em; }
+
   @include breakpoint(palm-md) {
     float: left;
     width: 50%;
   }
-  .meta { margin-top: 1.5em; }
 }
 
 @include breakpoint(palm-md) {
   .hero {
     height: 100%;
-
     .meta { margin-top: 10em; }
   } 
   .sidekick {

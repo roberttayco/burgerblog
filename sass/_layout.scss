@@ -18,17 +18,11 @@
   @include breakpoint(palm-md) {
     float: left;
     width: 50%;
-    // width: 48%;
-
-    // &:first-child { margin-right: 4%; }
     &:last-child { width: 100%; } 
   }
-  @include breakpoint(lap-sm) {
-    // margin-left: 2%;
-    width: 33.3333%;
 
-    // &:first-child { margin: 0; }
-    &:last-child { width: 33.3333%; }
+  @include breakpoint(lap-md) {
+    &, &:last-child { width: 33.3333%; }
   }
 }
 

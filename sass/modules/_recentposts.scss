@@ -31,10 +31,11 @@ article {
 @include breakpoint(palm-md) {
   article {
     figure {
-      height: 14em;
+      // height: 14em;
+      // height: em(20);
       margin-bottom: .75em;
     }
-    h2 { font-size: 2em; }
+    h2 { font-size: em(30); }
   }
 }
 // end article
@@ -86,7 +87,10 @@ article {
 
     figure, .meta { width: 100%; }
 
-    figure { height: em(200); }
+    figure {
+      height: em(200);
+      margin-right: 0;
+    }
     .meta {
       border: 0;
       height: em(240);
@@ -98,7 +102,7 @@ article {
 }
 
 /* .post-block 800px ======================== */
-@include breakpoint(lap-sm) {
+@include breakpoint(lap-md) {
   .post-block {
     height: auto;
 
@@ -123,6 +127,7 @@ article {
 .byline {
   font-size: em(11);
   font-style: italic;
+  @include breakpoint(lap-sm) { font-size: em(13); }
 }
 .category {
   background: $accent;
